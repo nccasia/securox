@@ -1,0 +1,154 @@
+.services-offer-cards {
+  background-size: contain;
+  position: relative;
+  left: 0;
+  right: 0;
+  z-index: 12;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin-top: -30vh;
+}
+
+.offer-card {
+    background: #fff;
+    color: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+    min-width: 220px;
+    max-width: 310px;
+    height: auto;
+    min-height: 220px;
+    padding: 2.5vw 1.8vw 1.8vw 1.8vw;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative;
+}
+.offer-card.active {
+  background: linear-gradient(135deg, #1de782 0%, #17c1bc 100%);
+  color: #fff;
+  transform: translateY(-8px) scale(1.03);
+}
+.offer-icon {
+  width: 68px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.offer-card h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.offer-card p {
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+.offer-btn {
+  background: #17c1bc;
+  color: #fff;
+  border: none;
+  padding: 16px 36px;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  width: 100%;
+}
+.offer-card.active .offer-btn
+ {
+  background: #fff;
+  color: #222;
+ 
+}
+
+
+.icon1 { background-image: url('../../public/icon1.1.png'); }
+.icon2 { background-image: url('../../public/icon2.2.png'); }
+.icon3 { background-image: url('../../public/icon3.3.png'); }
+.icon4 { background-image: url('../../public/icon4.4.png'); }
+.icon5 { background-image: url('../../public/icon5.5.png'); }
+.icon6 { background-image: url('../../public/icon1.1.png'); }
+.icon7 { background-image: url('../../public/icon7.7.png'); }
+.icon8 { background-image: url('../../public/icon8.8.png'); }
+.icon9 { background-image: url('../../public/icon9.9.png'); }
+.icon10 { background-image: url('../../public/icon10.10.png'); }
+
+.offer-card.active .icon1 { background-image: url('../../public/icon1.png'); }
+.offer-card.active .icon2 { background-image: url('../../public/icon1.png'); }
+.offer-card.active .icon3 { background-image: url('../../public/icon1.png'); }
+.offer-card.active .icon4 { background-image: url('../../public/icon1.png'); }
+.offer-card.active .icon5 { background-image: url('../../public/icon1.png'); }
+.offer-card.active .icon6 { background-image: url('../../public/icon6.png'); }
+.offer-card.active .icon7 { background-image: url('../../public/icon1.png'); }
+.offer-card.active .icon8 { background-image: url('../../public/icon1.png'); }
+.offer-card.active .icon9 { background-image: url('../../public/icon1.png'); }
+.offer-card.active .icon10 { background-image: url('../../public/icon10.png'); }
+
+@media (max-width: 600px) {
+  .services-offer-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 0;
+    padding: 0 10px;
+    justify-content: center;
+  }
+  .offer-card {
+    width: calc(50% - 8px);
+    min-width: 140px;
+    height: auto;
+    min-height: 180px;
+    padding: 12px ;
+    align-items: center;
+    text-align: center;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    margin: 0;
+    box-sizing: border-box;
+    max-width: unset;
+  }
+  .offer-card.active {
+    transform: none;
+  }
+  .offer-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+  }
+  .offer-card h3 {
+    font-size: 0.98rem;
+    margin-bottom: 6px;
+  }
+  .offer-card p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  .offer-btn {
+    padding: 8px 0;
+    font-size: 0.95rem;
+    width: 80%;
+    border-radius: 8px;
+  }
+  .offer-card:hover,
+  .offer-card.active:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transform: none;
+  }
+}

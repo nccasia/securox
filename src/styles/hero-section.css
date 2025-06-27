@@ -1,0 +1,217 @@
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 20px;
+  z-index: 1;
+  padding-bottom: 120px;
+}
+.hero-image {
+  max-width: 65%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.image-frame {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  max-height: 900px;   
+  min-height: 220px;  
+}
+.image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.group-img,
+.two-people-img {
+  width: auto;
+  height: auto;
+  max-width: unset;
+  object-fit: unset;
+}
+
+.hero-content {
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  z-index: 2;
+  text-align: left;
+  max-width: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 24px;
+}
+
+.discover-btn {
+  background: linear-gradient(90deg, #1de782 0%, #13a8f5 100%);
+  color: #fff;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  box-shadow: 0 4px 16px rgba(30, 167, 245, 0.15);
+}
+
+.discover-btn:hover {
+  background: linear-gradient(90deg, #13a8f5 0%, #1de782 100%);
+}
+
+.services-section {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  z-index: 2;
+  margin-top: 0;
+  padding-top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.services-container {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1100px;
+  width: 100%;
+}
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(30, 167, 245, 0.16), 0 1.5px 8px rgba(40,60,76,0.10);
+  padding: 32px 28px 24px 28px;
+  min-width: 260px;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
+}
+.service-card:hover {
+  box-shadow: 0 16px 48px rgba(30, 167, 245, 0.22), 0 3px 16px rgba(40,60,76,0.13);
+  transform: translateY(-4px) scale(1.03);
+}
+.service-card h3 {
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: #222;
+  text-align: center;
+  width: 100%;
+}
+.service-card p {
+  font-size: 0.98rem;
+  color: #888;
+  margin: 0 0 32px 0;
+}
+.service-arrow {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.service-card.active {
+  background: linear-gradient(90deg, #13a8f5 0%, #1de782 100%);
+  color: #fff;
+  box-shadow: 0 12px 48px rgba(30, 167, 245, 0.22), 0 3px 16px rgba(40,60,76,0.13);
+}
+.service-card.active h3,
+.service-card.active p {
+  color: #fff;
+}
+.service-card.active .service-arrow svg {
+  stroke: #fff !important;
+}
+.service-card .service-arrow svg g {
+  stroke: #1DE782;
+}
+.service-card.active .service-arrow svg g {
+  stroke: #fff !important;
+}
+
+/* mobile */
+@media (max-width: 600px) {
+  .services-container {
+    display: none !important;
+  }
+  .hero-section {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+    margin-top: 0;
+  }
+  .hero-image {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    flex: unset;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .hero-image img {
+    width: 100%;
+    max-width: 370px;
+    margin-top: 10px;
+  }
+  .hero-content {
+    position: static;
+    max-width: 100%;
+    text-align: center;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .discover-btn {
+    width: 100%;
+    max-width: 600px;
+    font-size: 1rem;
+    display: block;
+    border-radius: 999px;
+    position: relative;
+    top: -55px;
+    left: 50%;
+    margin-top: 0;
+  }
+  .about-protection-section {
+    margin-top: 0 !important;
+    padding-top: 24px !important;
+  }
+  .image-frame {
+    height: 45vh;
+    max-height: 300px;
+    min-height: 120px;
+    max-width: 98vw;
+  }
+}
