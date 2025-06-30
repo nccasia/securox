@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IO</title>
+    <title>Securox IO</title>
     <meta
       name="description"
       content="Securox IO - Professional security solutions and consulting. Protect your business and family with our top quality services."
@@ -42,56 +42,8 @@
           <nav class="nav-menu" role="navigation" aria-label="Main navigation">
             <a href="#" tabindex="0">Home</a>
             <a href="#about" tabindex="0">About Us</a>
-            <div class="dropdown">
-              <a
-                href="#services"
-                aria-haspopup="true"
-                aria-expanded="false"
-                tabindex="0"
-                >Services
-                <span class="arrow" aria-hidden="true"
-                  ><svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    style="vertical-align: middle"
-                  >
-                    <polyline
-                      points="4,6 8,10 12,6"
-                      fill="none"
-                      stroke="#1DE782"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    /></svg></span
-              ></a>
-            </div>
-            <a href="#project" tabindex="0">Project</a>
-            <a href="#contact" tabindex="0">Contact US</a>
-            <div class="dropdown">
-              <a
-                href="#pages"
-                aria-haspopup="true"
-                aria-expanded="false"
-                tabindex="0"
-                >Pages
-                <span class="arrow" aria-hidden="true"
-                  ><svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    style="vertical-align: middle"
-                  >
-                    <polyline
-                      points="4,6 8,10 12,6"
-                      fill="none"
-                      stroke="#1DE782"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    /></svg></span
-              ></a>
-            </div>
+            <a href="#services" tabindex="0">Services</a>
+            <a href="#contact" tabindex="0">Contact Us</a>
           </nav>
           <button class="get-started" aria-label="Get Started">
             Get Started
@@ -109,9 +61,7 @@
           <a href="#">Home</a>
           <a href="#about">About Us</a>
           <a href="#services">Services</a>
-          <a href="#project">Project</a>
           <a href="#contact">Contact Us</a>
-          <a href="#page">Pages</a>
         </nav>
       </div>
       <!-- ================= END MOBILE MENU OVERLAY ================= -->
@@ -119,7 +69,7 @@
       <section class="hero-section">
         <div class="hero-image">
           <div class="image-frame">
-            <img id="toggle-image" src="../public/group.png" alt="Group" class="group-img" style="cursor:pointer;" />
+            <img id="toggle-image" src="../public/group.png" alt="Group" class="group-img" />
           </div>
           <div class="hero-content">
             <button class="discover-btn" aria-label="Discover more">
@@ -203,7 +153,7 @@
       </section>
       <!-- ================= END HERO SECTION ================= -->
       <!-- ================= ABOUT PROTECTION SECTION ================= -->
-      <section class="about-protection-section">
+      <section class="about-protection-section" id="about">
         <div class="about-protection-container">
           <div class="about-protection-badge mobile-only">
             <span class="badge-title">Who we are ?</span>
@@ -223,6 +173,7 @@
             </div>
           </div>
           <div class="about-protection-content">
+            <h3 class="about-protection-subtitle desktop-only">Who we are ?</h3>
             <h2 class="about-protection-title">
               We're a tool for your family's protection
             </h2>
@@ -269,7 +220,7 @@
       </section>
       <!-- ================= END ABOUT PROTECTION SECTION ================= -->
       <!-- ================= SERVICES OFFER SECTION ================= -->
-      <section class="services-offer-section">
+      <section class="services-offer-section" id="services">
         <div class="services-offer-banner">
           <img
             src="../public/banner.png"
@@ -364,44 +315,38 @@
       <!-- ================= SCRIPTS FOR INTERACTION ================= -->
       <script>
         document.addEventListener("DOMContentLoaded", function () {
-          const cards = document.querySelectorAll(".service-card");
-          cards.forEach((card) => {
-            card.addEventListener("click", function () {
-              cards.forEach((c) => c.classList.remove("active"));
-              card.classList.add("active");
-            });
-          });
-          // Thêm cho offer-card
-          const offerCards = document.querySelectorAll(".offer-card");
-          offerCards.forEach((card) => {
-            card.addEventListener("click", function () {
-              offerCards.forEach((c) => c.classList.remove("active"));
-              card.classList.add("active");
-            });
-          });
-
-          // Toggle image on click
+          // Toggle image based on which service card is clicked
           const toggleImg = document.getElementById('toggle-image');
-          if (toggleImg) {
-            toggleImg.addEventListener('click', function () {
-              if (toggleImg.src.includes('group.png')) {
-                toggleImg.src = '../public/two-people.png';
-                toggleImg.alt = 'Two People';
-                toggleImg.classList.remove('group-img');
-                toggleImg.classList.add('two-people-img');
-              } else {
-                toggleImg.src = '../public/group.png';
-                toggleImg.alt = 'Group';
-                toggleImg.classList.remove('two-people-img');
-                toggleImg.classList.add('group-img');
-              }
+          const serviceCards = document.querySelectorAll('.service-card');
+          
+          if (toggleImg && serviceCards.length > 0) {
+            serviceCards.forEach(function(card, index) {
+              card.addEventListener('click', function () {
+                // Mỗi card sẽ gán 1 ảnh riêng biệt
+                let nextImage = '';
+                let nextAlt = '';
+                let nextClass = '';
+                if (index === 0 || index === 2) {
+                  nextImage = '../public/group.png';
+                  nextAlt = 'Group';
+                  nextClass = 'group-img';
+                } else if (index === 1) {
+                  nextImage = '../public/two-people.png';
+                  nextAlt = 'Two People';
+                  nextClass = 'two-people-img';
+                }
+                toggleImg.src = nextImage;
+                toggleImg.alt = nextAlt;
+                toggleImg.classList.remove('group-img', 'two-people-img');
+                toggleImg.classList.add(nextClass);
+              });
             });
           }
         });
       </script>
       <!-- ================= END SCRIPTS FOR INTERACTION ================= -->
       <!-- ================= FOOTER SECTION ================= -->
-      <footer class="footer-section">
+      <footer class="footer-section" id="contact">
         <div class="footer-container">
           <div class="footer-left">
             <div class="footer-logo">
@@ -521,5 +466,95 @@
       });
     </script>
     <!-- ================= END MENU TOGGLE SCRIPT ================= -->
+    <!-- ================= NAVBAR SMOOTH SCROLL SCRIPT ================= -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        function scrollToSection(id) {
+          const section = document.getElementById(id);
+          if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+        }
+
+        // Xử lý cho navbar chính
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+          link.addEventListener('click', function (e) {
+            const href = link.getAttribute('href');
+            if (href === '#') {
+              e.preventDefault();
+              scrollToTop();
+            } else if (href.startsWith('#')) {
+              e.preventDefault();
+              scrollToSection(href.substring(1));
+            }
+          });
+        });
+
+        // Xử lý cho mobile menu
+        document.querySelectorAll('.mobile-menu-nav a').forEach(link => {
+          link.addEventListener('click', function (e) {
+            const href = link.getAttribute('href');
+            if (href === '#') {
+              e.preventDefault();
+              scrollToTop();
+            } else if (href.startsWith('#')) {
+              e.preventDefault();
+              scrollToSection(href.substring(1));
+            }
+            // Đóng mobile menu sau khi click
+            document.getElementById('mobileMenu').classList.remove('active');
+            document.body.classList.remove('mobile-menu-open');
+          });
+        });
+      });
+    </script>
+    <!-- ================= END NAVBAR SMOOTH SCROLL SCRIPT ================= -->
+    <!-- ================= HERO IMAGE TAP SWITCH FOR MOBILE ================= -->
+    <script>
+      function handleHeroImageTapMobile() {
+        const heroImg = document.getElementById('toggle-image');
+        if (!heroImg) return;
+        // Remove previous listener if any
+        heroImg.onclick = null;
+        if (window.innerWidth <= 600) {
+          heroImg.onclick = function (e) {
+            const rect = heroImg.getBoundingClientRect();
+            const x = e.touches ? e.touches[0].clientX : e.clientX;
+            const mid = rect.left + rect.width / 2;
+            if (x < mid) {
+              // Tap left: group
+              heroImg.src = '../public/group.png';
+              heroImg.alt = 'Group';
+              heroImg.classList.remove('two-people-img');
+              heroImg.classList.add('group-img');
+            } else {
+              // Tap right: two-people
+              heroImg.src = '../public/two-people.png';
+              heroImg.alt = 'Two People';
+              heroImg.classList.remove('group-img');
+              heroImg.classList.add('two-people-img');
+            }
+          };
+          // Support both touch and click for mobile
+          heroImg.addEventListener('touchstart', heroImg.onclick);
+          heroImg.addEventListener('click', heroImg.onclick);
+        } else {
+          // Remove mobile listeners on desktop
+          heroImg.removeEventListener('touchstart', heroImg.onclick);
+          heroImg.removeEventListener('click', heroImg.onclick);
+        }
+      }
+      window.addEventListener('resize', handleHeroImageTapMobile);
+      window.addEventListener('DOMContentLoaded', handleHeroImageTapMobile);
+    </script>
+    <!-- ================= END HERO IMAGE TAP SWITCH FOR MOBILE ================= -->
   </body>
 </html>

@@ -77,9 +77,10 @@
 }
 .about-protection-subtitle {
   color: #1de782;
-  font-weight: 600;
-  font-size: 1.4rem;
+  font-weight: 700;
+  font-size: 1.7rem;
   margin-bottom: 8px;
+  margin-top: 0;
 }
 .about-protection-title {
   font-size: 2.4rem;

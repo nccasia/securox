@@ -116,8 +116,23 @@
   position: relative;
 }
 .service-card:hover {
-  box-shadow: 0 16px 48px rgba(30, 167, 245, 0.22), 0 3px 16px rgba(40,60,76,0.13);
+  background: linear-gradient(90deg, #13a8f5 0%, #1de782 100%);
+  color: #fff;
+  box-shadow: 0 12px 48px rgba(30, 167, 245, 0.22), 0 3px 16px rgba(40,60,76,0.13);
   transform: translateY(-4px) scale(1.03);
+}
+.service-card:hover h3,
+.service-card:hover p {
+  color: #fff;
+}
+.service-card:hover .service-arrow svg {
+  stroke: #fff !important;
+}
+.service-card .service-arrow svg g {
+  stroke: #1DE782;
+}
+.service-card:hover .service-arrow svg g {
+  stroke: #fff !important;
 }
 .service-card h3 {
   font-size: 1.18rem;
@@ -138,24 +153,6 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-}
-.service-card.active {
-  background: linear-gradient(90deg, #13a8f5 0%, #1de782 100%);
-  color: #fff;
-  box-shadow: 0 12px 48px rgba(30, 167, 245, 0.22), 0 3px 16px rgba(40,60,76,0.13);
-}
-.service-card.active h3,
-.service-card.active p {
-  color: #fff;
-}
-.service-card.active .service-arrow svg {
-  stroke: #fff !important;
-}
-.service-card .service-arrow svg g {
-  stroke: #1DE782;
-}
-.service-card.active .service-arrow svg g {
-  stroke: #fff !important;
 }
 
 /* mobile */

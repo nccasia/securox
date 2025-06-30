@@ -19,7 +19,7 @@
     min-width: 220px;
     max-width: 310px;
     height: auto;
-    min-height: 220px;
+    min-height: 380px;
     padding: 2.5vw 1.8vw 1.8vw 1.8vw;
     text-align: left;
     display: flex;
@@ -28,11 +28,26 @@
     transition: box-shadow 0.2s, transform 0.2s;
     position: relative;
 }
-.offer-card.active {
+.offer-card:hover {
   background: linear-gradient(135deg, #1de782 0%, #17c1bc 100%);
   color: #fff;
   transform: translateY(-8px) scale(1.03);
 }
+.offer-card:hover .offer-btn {
+  background: #fff;
+  color: #222;
+}
+.offer-card:hover .icon1 { background-image: url('../../public/icon1.png'); }
+.offer-card:hover .icon2 { background-image: url('../../public/icon1.png'); }
+.offer-card:hover .icon3 { background-image: url('../../public/icon1.png'); }
+.offer-card:hover .icon4 { background-image: url('../../public/icon1.png'); }
+.offer-card:hover .icon5 { background-image: url('../../public/icon1.png'); }
+.offer-card:hover .icon6 { background-image: url('../../public/icon6.png'); }
+.offer-card:hover .icon7 { background-image: url('../../public/icon1.png'); }
+.offer-card:hover .icon8 { background-image: url('../../public/icon1.png'); }
+.offer-card:hover .icon9 { background-image: url('../../public/icon1.png'); }
+.offer-card:hover .icon10 { background-image: url('../../public/icon10.png'); }
+
 .offer-icon {
   width: 68px;
   height: 68px;
@@ -71,13 +86,6 @@
   margin-top: auto;
   width: 100%;
 }
-.offer-card.active .offer-btn
- {
-  background: #fff;
-  color: #222;
- 
-}
-
 
 .icon1 { background-image: url('../../public/icon1.1.png'); }
 .icon2 { background-image: url('../../public/icon2.2.png'); }
@@ -89,17 +97,6 @@
 .icon8 { background-image: url('../../public/icon8.8.png'); }
 .icon9 { background-image: url('../../public/icon9.9.png'); }
 .icon10 { background-image: url('../../public/icon10.10.png'); }
-
-.offer-card.active .icon1 { background-image: url('../../public/icon1.png'); }
-.offer-card.active .icon2 { background-image: url('../../public/icon1.png'); }
-.offer-card.active .icon3 { background-image: url('../../public/icon1.png'); }
-.offer-card.active .icon4 { background-image: url('../../public/icon1.png'); }
-.offer-card.active .icon5 { background-image: url('../../public/icon1.png'); }
-.offer-card.active .icon6 { background-image: url('../../public/icon6.png'); }
-.offer-card.active .icon7 { background-image: url('../../public/icon1.png'); }
-.offer-card.active .icon8 { background-image: url('../../public/icon1.png'); }
-.offer-card.active .icon9 { background-image: url('../../public/icon1.png'); }
-.offer-card.active .icon10 { background-image: url('../../public/icon10.png'); }
 
 @media (max-width: 600px) {
   .services-offer-cards {
@@ -124,7 +121,7 @@
     box-sizing: border-box;
     max-width: unset;
   }
-  .offer-card.active {
+  .offer-card:hover {
     transform: none;
   }
   .offer-icon {
@@ -146,8 +143,7 @@
     width: 80%;
     border-radius: 8px;
   }
-  .offer-card:hover,
-  .offer-card.active:hover {
+  .offer-card:hover {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transform: none;
   }
