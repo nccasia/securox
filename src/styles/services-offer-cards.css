@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    transition: box-shadow 0.2s, transform 0.2s;
+    transition: box-shadow 0.3s, transform 0.3s, background 0.3s, color 0.3s;
     position: relative;
 }
 .offer-card:hover {
@@ -79,7 +79,7 @@
   border-radius: 12px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.3s, color 0.3s;
   display: block;
   margin-left: auto;
   margin-right: auto;
