@@ -3,12 +3,12 @@
   color: #fff;
   padding: 30px 0 10px 0;
   font-family: 'Montserrat', Arial, sans-serif;
-  margin-top: auto;
+  margin-top: auto;    
 }
 .footer-container {
-  width: 100%;
   margin: 0;
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -172,3 +172,4 @@
     height: 18px;
   }
 }
+
