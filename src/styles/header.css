@@ -76,9 +76,6 @@
 .get-started:hover {
   opacity: 0.9;
 }
-.header-container > * {
-  min-width: 0;
-}
 .menu-icon {
   display: none;
   flex-direction: column;
@@ -143,7 +140,7 @@
     display: flex; 
   }
   .get-started {
-    display: none !important; 
+    display: none ; 
   }
 }
 

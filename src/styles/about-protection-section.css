@@ -1,7 +1,7 @@
 .about-protection-section {
   position: relative;
   z-index: 1;
-  padding-top: 70px;
+  padding-top: 5%;
   display: flex;
   justify-content: center;
 }
@@ -9,7 +9,7 @@
   display: flex;
   align-items: flex-start;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: -30px auto 0 auto;
   gap: 48px;
   width: 100%;
 }
@@ -35,7 +35,7 @@
   display: flex;
   align-items: center;
   padding: 6px 6px 6px 28px;
-  box-shadow: 0 4px 24px rgba(30, 167, 245, 0.10);
+  box-shadow: 0 4px 24px rgba(30, 167, 245, 0.1);
   z-index: 2;
   gap: 22px;
 }
@@ -51,10 +51,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 68px !important;
-  height: 68px !important;
-  min-width: 68px !important;
-  min-height: 68px !important;
+  width: 68px;
+  height: 68px;
+  min-width: 68px;
+  min-height: 68px;
 }
 .badge-icon-img {
   position: absolute;
@@ -126,7 +126,7 @@
   position: relative;
 }
 .check:after {
-  content: '';
+  content: "";
   display: block;
   width: 8px;
   height: 4px;
@@ -140,7 +140,8 @@
 .about-protection-experience {
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 8px 32px rgba(30, 167, 245, 0.18), 0 3px 16px rgba(40,60,76,0.13);
+  box-shadow: 0 8px 32px rgba(30, 167, 245, 0.18),
+    0 3px 16px rgba(40, 60, 76, 0.13);
   padding: 24px 32px;
   display: flex;
   flex-direction: column;
@@ -151,7 +152,7 @@
 }
 .years {
   color: #1de782;
-  font-size: 4.8rem;
+  font-size: 6rem;
   font-weight: 700;
   line-height: 1;
 }
@@ -164,44 +165,52 @@
 
 /* mobile */
 
-.desktop-only { display: block; }
-.mobile-only { display: none; }
+.desktop-only {
+  display: block;
+}
+.mobile-only {
+  display: none;
+}
 
 @media (max-width: 600px) {
-  .desktop-only { display: none !important; }
-  .mobile-only { display: block !important; }
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: block;
+  }
   .about-protection-badge.mobile-only {
     align-items: center;
-    width: 100%;
-    max-width: 330px;
-    border-radius: 0 56px 56px 0; 
+    width: 90%;
+    margin-right: 10px;
+    border-radius: 0 56px 56px 0;
     align-self: flex-start;
     overflow-x: auto;
     left: 0px;
+    display: flex;
   }
   .about-protection-badge.mobile-only .badge-icon {
-    display: inline-flex;
     font-size: 2rem;
     max-width: none;
     vertical-align: middle;
-    margin-left: 20px;
+    margin-right: 0;
   }
   .about-protection-badge.mobile-only .badge-title {
-    display: inline-flex;
     font-size: 2rem;
     max-width: none;
     vertical-align: middle;
-    margin-left: 30px;
     font-weight: 700;
     letter-spacing: 0.5px;
+    margin-left: auto;
   }
-  
+
   .about-protection-section {
-   top: -80px;
+    top: -2.5%;
   }
   .about-protection-container {
     display: block;
     text-align: left;
+    margin-top: 1%;
   }
   .about-protection-image {
     float: right;
@@ -240,15 +249,16 @@
     font-size: 0.9rem;
     color: #181818;
     margin-bottom: 0;
-   margin-top: 3px;
+    margin-top: 3px;
   }
   .about-protection-details {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     gap: 0;
-    width: 350px;
-    padding: 0px 15px 0px 15px;
+    max-width: 320px;
+    width: 100%;
+    padding: 0px 10px 0px 10px;
   }
   .about-protection-list {
     gap: 8px;
@@ -260,7 +270,6 @@
     margin-top: 3px;
   }
   .about-protection-experience {
-    min-width: 70px;
     padding: 10px 6px;
   }
   .years {
@@ -279,7 +288,6 @@
   align-items: center;
   padding: 20px 1px 20px 16px;
   gap: 22px;
-  box-shadow: 0 4px 24px rgba(30, 167, 245, 0.10);
+  box-shadow: 0 4px 24px rgba(30, 167, 245, 0.1);
   z-index: 2;
-  
 }

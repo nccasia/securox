@@ -5,7 +5,7 @@
   position: relative;
   margin-top: 20px;
   z-index: 1;
-  padding-bottom: 120px;
+  padding-bottom: 8%;
 }
 .hero-image {
   max-width: 65%;
@@ -126,13 +126,13 @@
   color: #fff;
 }
 .service-card:hover .service-arrow svg {
-  stroke: #fff !important;
+  stroke: #fff ;
 }
 .service-card .service-arrow svg g {
   stroke: #1DE782;
 }
 .service-card:hover .service-arrow svg g {
-  stroke: #fff !important;
+  stroke: #fff ;
 }
 .service-card h3 {
   font-size: 1.18rem;
@@ -158,13 +158,13 @@
 /* mobile */
 @media (max-width: 600px) {
   .services-container {
-    display: none !important;
+    display: none ;
   }
   .hero-section {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    padding-bottom: 10px;
+    padding-bottom: 3px;
     margin-top: 0;
   }
   .hero-image {
@@ -202,8 +202,8 @@
     margin-top: 0;
   }
   .about-protection-section {
-    margin-top: 0 !important;
-    padding-top: 24px !important;
+    margin-top: 0 ;
+    padding-top: 24px ;
   }
   .image-frame {
     height: 45vh;
