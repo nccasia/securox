@@ -110,7 +110,7 @@
   transform: translateY(-11px) rotate(-45deg);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 992px) {
   .main-header {
     position: fixed;
     width: 100%;
