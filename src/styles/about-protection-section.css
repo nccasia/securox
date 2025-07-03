@@ -28,6 +28,7 @@
 }
 .about-protection-badge {
   position: absolute;
+  min-width: 230px;
   top: 0;
   left: 100px;
   background: linear-gradient(90deg, #3ec6e0 0%, #1de782 100%);
@@ -38,6 +39,17 @@
   box-shadow: 0 4px 24px rgba(30, 167, 245, 0.1);
   z-index: 2;
   gap: 22px;
+}
+.about-protection-badge.desktop-only {
+  min-width: 230px;
+  border-radius: 56px;
+  background: linear-gradient(90deg, #3ec6e0 0%, #1de782 100%);
+  display: flex;
+  align-items: center;
+  padding: 20px 1px 20px 16px;
+  gap: 22px;
+  box-shadow: 0 4px 24px rgba(30, 167, 245, 0.1);
+  z-index: 2;
 }
 .badge-title {
   color: #fff;
@@ -205,7 +217,7 @@
   }
 
   .about-protection-section {
-    top: -2.5%;
+    top: -4%;
   }
   .about-protection-container {
     display: block;
@@ -224,10 +236,9 @@
     display: block;
     align-items: flex-end;
     width: calc(100% - 180px);
-    margin-top: 70px;
-    margin-left: 30px;
-    text-align: left;
     float: left;
+    padding-top: 20%;
+
   }
   .about-protection-image img {
     width: 120px;
@@ -255,10 +266,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    gap: 0;
-    max-width: 320px;
     width: 100%;
-    padding: 0px 10px 0px 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
   }
   .about-protection-list {
     gap: 8px;
@@ -280,14 +291,99 @@
   }
 }
 
-.about-protection-badge.desktop-only {
-  min-width: 230px;
-  border-radius: 56px;
-  background: linear-gradient(90deg, #3ec6e0 0%, #1de782 100%);
-  display: flex;
-  align-items: center;
-  padding: 20px 1px 20px 16px;
-  gap: 22px;
-  box-shadow: 0 4px 24px rgba(30, 167, 245, 0.1);
-  z-index: 2;
+/* Responsive tối giản dưới 1200px */
+@media (max-width: 1200px) {
+  .about-protection-container {
+   width: 100%;
+   justify-content: center;
+  }
+  .about-protection-image {
+    flex: 0 0 260px;
+  }
+  .about-protection-image img {
+    width: 200px;
+  }
+  .about-protection-badge.desktop-only {
+    left: 10px;
+    padding-left: 18px;
+    gap: 16px;
+  }
+  .about-protection-title {
+    font-size: 1.7rem;
+  }
+  .about-protection-desc {
+    font-size: 1rem;
+  }
+  .about-protection-content {
+    margin-top: 0;
+  }
+  .about-protection-details {
+    gap: 18px;
+    max-width: 60vw;
+  }
+  .about-protection-experience {
+    padding: 16px 12px;
+    min-width: 80px;
+  }
+  .years {
+    font-size: 3.2rem;
+  }
+  .years-label {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive tối giản dưới 900px */
+@media (max-width: 900px) {
+  .about-protection-container {
+    width: 100%;
+    justify-content: center;
+  }
+  .about-protection-section{
+    padding-top: 7% ;
+  }
+  .about-protection-image {
+    flex: 0 0 160px;
+  }
+  .about-protection-image img {
+    width: 120px;
+  }
+  .about-protection-badge.desktop-only {
+    left: 10px;
+    padding-left: 18px;
+    gap: 16px;
+    height: 40px;
+    min-width: 190px;
+    width: 160px;
+  }
+ .badge-title {
+    font-size: 1.5rem;
+  }
+  .badge-icon {
+   margin-left: 10px;
+  }
+  .about-protection-title {
+    font-size: 1.3rem;
+  }
+  .about-protection-desc {
+    font-size: 0.9rem;
+  }
+  .about-protection-content {
+    margin-left: 30px;
+    text-align: left;
+  }
+  .about-protection-details {
+    gap: 8px;
+    max-width: 100%;
+  }
+  .about-protection-experience {
+    padding: 8px 4px;
+    min-width: 60px;
+  }
+  .years {
+    font-size: 2rem;
+  }
+  .years-label {
+    font-size: 0.8rem;
+  }
 }

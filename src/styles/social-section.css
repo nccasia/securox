@@ -48,3 +48,31 @@
     height: 24px;
   }
 }
+
+@media (max-width: 1200px) {
+  .social-container {
+    max-width: 100%;
+    padding: 0 24px;
+  }
+  .social-icon {
+    width: 60px;
+    height: 60px;
+  }
+  .social-icon img {
+    height: 32px;
+  }
+}
+
+@media (max-width: 900px) {
+  .social-container {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .social-icon {
+    width: 50px;
+    height: 50px;
+  }
+  .social-icon img {
+    height: 28px;
+  }
+}

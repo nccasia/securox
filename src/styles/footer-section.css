@@ -106,17 +106,15 @@
   }
   
   .footer-container {
-    flex-direction: column;
     gap: 0px;
     align-items: center;
   }
   
   .footer-left {
     flex: 1 1 auto;
-    margin-left: 0;
     align-items: center;
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
+    margin: 0 40px;
   }
   
   .footer-logo {
@@ -141,8 +139,7 @@
   
   .footer-right {
     flex: 1 1 auto;
-    text-align: center;
-    margin: 0 20px;
+    margin: 0 40px;
   }
   
   .footer-right h3 {
@@ -170,6 +167,47 @@
   
   .footer-icon-btn {
     height: 18px;
+  }
+}
+
+/* Tablet Responsive Styles */
+@media (max-width: 1200px) {
+  .footer-left {
+    margin-left: 40px;
+  }
+  .footer-right {
+    margin-right: 40px;
+  }
+  .footer-container {
+    justify-content: center;
+  }
+}
+
+/* Small Laptop/Tablet Responsive Styles */
+@media (max-width: 900px) {
+  .footer-container {
+    align-items: center;
+  }
+  .footer-left, .footer-right {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-logo {
+    justify-content: center;
+  }
+  .footer-right h3 {
+    font-size: 1.1rem;
+  }
+  .footer-right p {
+    font-size: 0.85rem;
+  }
+  .footer-newsletter input[type="email"] {
+    font-size: 0.95rem;
+  }
+  .footer-newsletter button {
+    font-size: 0.95rem;
   }
 }
 

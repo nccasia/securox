@@ -110,7 +110,7 @@
   transform: translateY(-11px) rotate(-45deg);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .main-header {
     position: fixed;
     width: 100%;
@@ -141,6 +141,15 @@
   }
   .get-started {
     display: none ; 
+  }
+}
+
+@media (max-width: 1200px) {
+  .header-container {
+    justify-content: center;
+  }
+  .logo {
+    margin-right: 15%;
   }
 }
 
