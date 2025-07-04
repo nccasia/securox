@@ -309,9 +309,6 @@
   .about-protection-row {
     padding-top: 0 !important;
   }
-  .about-protection-image {
-   
-  }
   .about-protection-image img {
    max-width: 140px;
   }
@@ -424,8 +421,6 @@
   }
   .about-protection-title {
     font-size: 1.3rem;
-  }
-  .about-protection-row {
   }
   .about-protection-content {
     text-align: left;

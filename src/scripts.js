@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (toggleImg && serviceCards.length > 0) {
     serviceCards.forEach(function(card, index) {
       card.addEventListener('click', function () {
-        // Mỗi card sẽ gán 1 ảnh riêng biệt
+       
         let nextImage = '';
         let nextAlt = '';
         let nextClass = '';
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function scrollToSection(id) {
     const section = document.getElementById(id);
     if (section) {
-      const headerOffset = 56; // chiều cao header sticky
+      const headerOffset = 56; 
       const elementPosition = section.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - headerOffset;
       window.scrollTo({
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
       behavior: 'smooth'
     });
   }
-  // Xử lý cho navbar chính
+
   document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', function (e) {
       const href = link.getAttribute('href');
@@ -101,15 +101,15 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-  // Xử lý cho mobile menu
+
   document.querySelectorAll('.mobile-menu-nav a').forEach(link => {
     link.addEventListener('click', function (e) {
       const href = link.getAttribute('href');
       e.preventDefault();
-      // Đóng mobile menu trước
+     
       document.getElementById('mobileMenu').classList.remove('active');
       document.body.classList.remove('mobile-menu-open');
-      // Đợi menu đóng xong mới scroll (delay 200ms)
+    
       setTimeout(() => {
         if (href === '#') {
           scrollToTop();
@@ -128,12 +128,10 @@ function moveProtectionDetails() {
   const container = document.querySelector('.about-protection-container');
   if (!details || !content || !container) return;
   if (window.innerWidth <= 600) {
-    // Nếu details đang nằm trong content thì di chuyển ra ngoài
     if (details.parentElement === content) {
       container.appendChild(details);
     }
   } else {
-    // Nếu details đang nằm ngoài content thì di chuyển lại vào trong content
     if (details.parentElement === container) {
       content.appendChild(details);
     }
@@ -146,7 +144,6 @@ window.addEventListener('DOMContentLoaded', moveProtectionDetails);
 function handleHeroImageTapMobile() {
   const heroImg = document.getElementById('toggle-image');
   if (!heroImg) return;
-  // Remove previous listener if any
   heroImg.onclick = null;
   if (window.innerWidth <= 600) {
     heroImg.onclick = function (e) {
@@ -154,13 +151,11 @@ function handleHeroImageTapMobile() {
       const x = e.touches ? e.touches[0].clientX : e.clientX;
       const mid = rect.left + rect.width / 2;
       if (x < mid) {
-        // Tap left: group
         heroImg.src = '../public/group.png';
         heroImg.alt = 'Group';
         heroImg.classList.remove('two-people-img');
         heroImg.classList.add('group-img');
       } else {
-        // Tap right: two-people
         heroImg.src = '../public/two-people.png';
         heroImg.alt = 'Two People';
         heroImg.classList.remove('group-img');
@@ -178,3 +173,14 @@ function handleHeroImageTapMobile() {
 }
 window.addEventListener('resize', handleHeroImageTapMobile);
 window.addEventListener('DOMContentLoaded', handleHeroImageTapMobile); 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const newsletterForm = document.querySelector('.footer-newsletter');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function(e) {
+      e.preventDefault(); 
+      alert('Đăng ký nhận tin thành công!');
+    });
+  }
+});
