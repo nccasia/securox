@@ -143,7 +143,6 @@
 .service-card p {
   font-size: 0.98rem;
   color: #888;
-  margin: 0 0 32px 0;
 }
 .service-arrow {
   margin-top: auto;
@@ -167,6 +166,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 0;
+    margin-bottom: 0 !important;
     padding-bottom: 0;
   }
   .hero-image {
@@ -207,7 +207,7 @@
   }
   .image-frame {
     height: 45vh;
-    max-height: 300px;
+    max-height: 300px !important;
     min-height: 120px;
     max-width: 98vw;
   }
@@ -217,7 +217,7 @@
   .hero-section {
     justify-content: center;
     align-items: center;
-    margin-bottom: 0;;
+    margin-bottom: 0 !important;
   }
   .hero-image {
     max-width: 80%;
@@ -247,15 +247,15 @@
   .services-section {
     width: 90%;
     max-width: 90vw;
-    bottom: 5%;
+    bottom: 5% !important;
   }
   .services-container {
     width: 90%;
     justify-content: center;
   }
   .service-card {
-    min-width: 80px;
-    padding: 10px 8px 8px 8px;
+    min-width: 80px !important;
+    padding: 10px 8px 8px 8px !important;
     font-size: 0.75rem;
   }
   .service-card h3 {
@@ -268,8 +268,8 @@
     margin-bottom: 5px;
   }
   .service-card svg {
-    width: 40px;
-    height: 40px;
+    width: 40px !important;
+    height: 40px !important;
   }
 }
 
@@ -305,7 +305,6 @@
   .services-section {
     width: 100%;
     max-width: 99vw;
-   bottom: -6%;
   }
   .services-container {
     gap: 8px;
@@ -322,17 +321,16 @@
     font-size: 1rem;
   }
   .service-card svg {
-    width: 48px;
-    height: 48px;
+    width: 48px !important;
+    height: 48px !important;
   }
 }
 
-/* Tablet và màn hình nhỏ hơn desktop */
 @media (max-width: 1200px) {
   .hero-section {
     justify-content: center;
     align-items: center;
-   margin-bottom: 50px;
+    margin-bottom: 50px;
   }
   .hero-image {
     max-width: 80%;

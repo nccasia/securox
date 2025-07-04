@@ -210,12 +210,13 @@
     margin-right: 0;
   }
   .about-protection-badge.mobile-only .badge-title {
-    font-size: 2rem;
+    font-size: 2rem !important;
     max-width: none;
     vertical-align: middle;
     font-weight: 700;
     letter-spacing: 0.5px;
     margin-left: auto;
+    align-items: center;
   }
 
   .about-protection-section {
@@ -226,11 +227,13 @@
     flex-direction: column;
     text-align: left;
     margin-top: 1%;
+    padding: 0 !important;
   }
   .about-protection-content {
     flex: 0 0 60%;
     max-width: 60%;
-    margin-top: 80px;
+    margin-top: 80px !important;
+   padding-bottom: 0 !important;
   }
   .about-protection-row {
     display: flex;
@@ -238,21 +241,20 @@
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    padding: 0 16px;
+    padding-left: 16px;
   }
   .about-protection-image {
     flex: 0 0 30%;
     max-width: 30%;
     max-width: 70px;
     display: flex;
-    transform: translateX(-8px);
-    margin-top: 20px;
+    transform: translateX(-30px);
+    margin-top: 50px;
     justify-content: flex-end;
   }
 
   .about-protection-image img {
-    width: 100%;
-    max-width: 90px;
+    width: 90px !important;
     height: auto;
   }
   .about-protection-title,
@@ -284,8 +286,8 @@
     font-size: 0.95rem;
   }
   .about-protection-list li {
-    font-size: 0.7rem;
-    gap: 1px;
+    font-size: 0.7rem !important;
+    gap: 1px !important;
     margin-top: 3px;
   }
   .about-protection-experience {
@@ -299,22 +301,32 @@
   }
 }
 
-@media (max-width: 786px) {
+@media (max-width: 768px) {
   .about-protection-container {
     width: 100%;
     justify-content: center;
   }
-  .about-protection-image > img {
-    position: relative;
-    margin-top: 20px;
+  .about-protection-row {
+    padding-top: 0 !important;
   }
+  .about-protection-image {
+   
+  }
+  .about-protection-image img {
+   max-width: 140px;
+  }
+  
   .about-protection-badge.desktop-only {
-    left: 10px;
-    padding-left: 18px;
+    margin-left: 24px;
+    padding-left: 18px !important;
     gap: 16px;
-    height: 30px;
-    min-width: 180px;
-    top: 0;
+    height: 30px !important;
+    min-width: 140px !important;
+    width: 140px !important;
+    top: -2%;
+  }
+  .badge-title {
+    font-size: 1.1rem !important;
   }
   .badge-icon {
     position: relative;
@@ -323,6 +335,8 @@
     justify-content: center;
     height: 40px;
     min-width: 40px;
+    margin-left: 0 !important;
+    margin-right: 10px;
   }
   .badge-icon-shield {
     position: relative;
@@ -342,13 +356,20 @@
     z-index: 1;
   }
   .about-protection-title {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
   .about-protection-content {
     text-align: left;
+    margin-top: 0;
+    padding-bottom: 40px;
+    padding-left: 0 !important;
+  }
+  .about-protection-desc {
+    margin-bottom: 5px;
   }
   .about-protection-details {
-    gap: 2px;
+    gap: 2px !important;
+    align-items: center;
   }
   .about-protection-experience {
     padding: 8px 4px;
@@ -364,10 +385,10 @@
     gap: 8px;
   }
   .years {
-    font-size: 2.5rem;
+    font-size: 2.5rem !important;
   }
   .years-label {
-    font-size: 0.6rem;
+    font-size: 0.6rem !important;
   }
 }
 
@@ -380,6 +401,7 @@
     width: 100%;
     justify-content: center;
     gap: 0;
+    padding: 20px;
     
   }
   .about-protection-image img {
@@ -387,8 +409,8 @@
     
   }
   .about-protection-badge.desktop-only {
-    left: 10px;
-    padding-left: 18px;
+    left: -10% !important;
+    padding-left: 32px !important ;
     gap: 16px;
     height: 40px;
     min-width: 190px;
@@ -404,11 +426,10 @@
     font-size: 1.3rem;
   }
   .about-protection-row {
-    padding-top: 20px;
   }
   .about-protection-content {
     text-align: left;
-    padding-left: 0;
+   
   }
   .about-protection-experience {
     padding: 8px 4px;
@@ -428,13 +449,13 @@
    justify-content: center;
   }
   .about-protection-image {
-    flex: 0 0 260px;
+    flex: 0 0 200px;
   }
   .about-protection-image img {
     width: 200px;
   }
   .about-protection-badge.desktop-only {
-    left: 10px;
+    left: -20%;
     padding-left: 18px;
     gap: 16px;
   }
