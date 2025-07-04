@@ -8,7 +8,6 @@
   display: flex;
   align-items: flex-start;
   max-width: 1100px;
-  margin-top: 120px;
   gap: 48px;
   width: 100%;
 }
@@ -89,7 +88,7 @@
 }
 
 .about-protection-content {
-  margin-top: -15%;
+  margin-top: -17%;
 }
 .about-protection-subtitle {
   color: #1de782;
@@ -201,7 +200,6 @@
     margin-right: 10px;
     border-radius: 0 56px 56px 0;
     align-self: flex-start;
-    overflow-x: auto;
     left: 0px;
     display: flex;
   }
@@ -301,7 +299,129 @@
   }
 }
 
-/* Responsive tối giản dưới 1200px */
+@media (max-width: 786px) {
+  .about-protection-container {
+    width: 100%;
+    justify-content: center;
+  }
+  .about-protection-image > img {
+    position: relative;
+    margin-top: 20px;
+  }
+  .about-protection-badge.desktop-only {
+    left: 10px;
+    padding-left: 18px;
+    gap: 16px;
+    height: 30px;
+    min-width: 180px;
+    top: 0;
+  }
+  .badge-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    min-width: 40px;
+  }
+  .badge-icon-shield {
+    position: relative;
+    width: 36px !important;
+    height: 36px !important;
+    z-index: 2;
+  }
+  .badge-icon-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 58px !important;
+    height: 58px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  .about-protection-title {
+    font-size: 1rem;
+  }
+  .about-protection-content {
+    text-align: left;
+  }
+  .about-protection-details {
+    gap: 2px;
+  }
+  .about-protection-experience {
+    padding: 8px 4px;
+    min-width: 50px;
+  }
+  .about-protection-list li {
+    color: #222;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex
+;
+    align-items: center;
+    gap: 8px;
+  }
+  .years {
+    font-size: 2.5rem;
+  }
+  .years-label {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-protection-section{
+    margin-top: 0;
+    
+  }
+  .about-protection-container {
+    width: 100%;
+    justify-content: center;
+    gap: 0;
+    
+  }
+  .about-protection-image img {
+    width: 150px;
+    
+  }
+  .about-protection-badge.desktop-only {
+    left: 10px;
+    padding-left: 18px;
+    gap: 16px;
+    height: 40px;
+    min-width: 190px;
+    width: 160px;
+  }
+ .badge-title {
+    font-size: 1.5rem;
+  }
+  .badge-icon {
+   margin-left: 10px;
+  }
+  .about-protection-title {
+    font-size: 1.3rem;
+  }
+  .about-protection-row {
+    padding-top: 20px;
+  }
+  .about-protection-content {
+    text-align: left;
+    padding-left: 0;
+  }
+  .about-protection-experience {
+    padding: 8px 4px;
+    min-width: 60px;
+  }
+  .years {
+    font-size: 2.8rem;
+  }
+  .years-label {
+    font-size: 0.8rem;
+  }
+}
+
 @media (max-width: 1200px) {
   .about-protection-container {
    width: 100%;
@@ -341,123 +461,4 @@
     font-size: 1rem;
   }
 }
-
-/* Responsive tối giản dưới 900px */
-@media (max-width: 992px) {
-  .about-protection-section{
-    margin-top: 0;
-    
-  }
-  .about-protection-container {
-    width: 100%;
-    justify-content: center;
-    gap: 0;
-    
-  }
-  .about-protection-image {
-  }
-  .about-protection-image img {
-    width: 150px;
-    
-  }
-  .about-protection-badge.desktop-only {
-    left: 10px;
-    padding-left: 18px;
-    gap: 16px;
-    height: 40px;
-    min-width: 190px;
-    width: 160px;
-  }
- .badge-title {
-    font-size: 1.5rem;
-  }
-  .badge-icon {
-   margin-left: 10px;
-  }
-  .about-protection-title {
-    font-size: 1.3rem;
-  }
-  .about-protection-desc {
-
-  }
-  .about-protection-content {
-    text-align: left;
-    padding-left: 0;
-  }
-  .about-protection-details {
-  }
-  .about-protection-experience {
-    padding: 8px 4px;
-    min-width: 60px;
-  }
-  .years {
-    font-size: 2.8rem;
-  }
-  .years-label {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 786px) {
-  .about-protection-container {
-    width: 100%;
-    justify-content: center;
-  }
-  .about-protection-section{
-    
-  }
-  .about-protection-image {
-  }
-  .about-protection-image > img {
-    position: relative;
-    margin-top: 20px;
-  }
-  .about-protection-badge.desktop-only {
-    left: 10px;
-    padding-left: 18px;
-    gap: 16px;
-    height: 30px;
-    min-width: 180px;
-    top: 0;
-  }
- .badge-title {
-  }
-  .badge-icon {
-   margin-left: 6px;
-  }
-  .about-protection-title {
-    font-size: 1rem;
-  }
-  .about-protection-desc {
-  }
-  .about-protection-content {
-   
-    text-align: left;
-  
-  }
-  .about-protection-details {
-    gap: 2px;
-   
-  }
-  .about-protection-experience {
-    padding: 8px 4px;
-    min-width: 50px;
-  }
-  .about-protection-list li {
-    color: #222;
-    font-size: 0.8rem;
-    font-weight: 500;
-    display: flex
-;
-    align-items: center;
-    gap: 8px;
-  }
-  .years {
-    font-size: 2.5rem;
-  }
-  .years-label {
-    font-size: 0.6rem;
-  }
-}
-
 

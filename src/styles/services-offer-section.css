@@ -110,8 +110,6 @@
 }
 
 @media (max-width: 992px) {
-  .services-offer-section {
-  }
   .services-offer-title {
     margin-bottom: 6px;
   }
@@ -125,9 +123,6 @@
   .services-offer-title,
   .services-offer-desc {
     margin-left: 2%;
-  }
-  .services-offer-banner {
-   
   }
 }
 
