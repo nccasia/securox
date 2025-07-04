@@ -31,25 +31,15 @@
 }
 .about-protection-badge {
   position: absolute;
-  min-width: 230px;
+  max-width: 220px;
+  width: 100%;
   top: 0;
-  left: 100px;
-  background: linear-gradient(90deg, #3ec6e0 0%, #1de782 100%);
-  border-radius: 56px;
-  display: flex;
-  align-items: center;
-  padding: 6px 6px 6px 28px;
-  box-shadow: 0 4px 24px rgba(30, 167, 245, 0.1);
-  z-index: 2;
-  gap: 22px;
-}
-.about-protection-badge.desktop-only {
-  min-width: 230px;
+  transform: translateX(40%);
   border-radius: 56px;
   background: linear-gradient(90deg, #3ec6e0 0%, #1de782 100%);
   display: flex;
   align-items: center;
-  padding: 20px 1px 20px 16px;
+  padding: 18px 1px 18px 16px;
   gap: 22px;
   box-shadow: 0 4px 24px rgba(30, 167, 245, 0.1);
   z-index: 2;
@@ -194,31 +184,6 @@
   .mobile-only {
     display: block;
   }
-  .about-protection-badge.mobile-only {
-    align-items: center;
-    width: 90%;
-    margin-right: 10px;
-    border-radius: 0 56px 56px 0;
-    align-self: flex-start;
-    left: 0px;
-    display: flex;
-  }
-  .about-protection-badge.mobile-only .badge-icon {
-    font-size: 2rem;
-    max-width: none;
-    vertical-align: middle;
-    margin-right: 0;
-  }
-  .about-protection-badge.mobile-only .badge-title {
-    font-size: 2rem !important;
-    max-width: none;
-    vertical-align: middle;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    margin-left: auto;
-    align-items: center;
-  }
-
   .about-protection-section {
     width: 100%;
   }
@@ -226,22 +191,69 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin-top: 1%;
     padding: 0 !important;
   }
   .about-protection-content {
     flex: 0 0 60%;
     max-width: 60%;
-    margin-top: 80px !important;
-   padding-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .about-protection-subtitle {
+    display: none;
   }
   .about-protection-row {
     display: flex;
-    flex-direction: row-reverse; 
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
     gap: 16px;
     padding-left: 16px;
+  }
+  .about-protection-badge {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 94% !important;
+    max-width: none;
+    height: 40px ;
+    border-radius: 0 40px 40px 0;
+    background: linear-gradient(90deg, #3ec6e0 0%, #1de782 100%);
+    box-shadow: 0 4px 24px rgba(30, 167, 245, 0.1);
+    margin: 0;
+    gap: 12px;
+    top: 0% !important;
+    transform: none !important ;
+    margin-left: 0 !important;
+    left: 0 !important;
+  }
+  .badge-title {
+    color: #fff;
+    font-size: 2rem !important;
+    font-weight: 700;
+    text-align: center;
+    flex: 1;
+    margin: 0;
+  }
+
+  .badge-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px !important;
+  }
+  .badge-icon-img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .badge-icon-shield {
+    width: 24px !important;
+    height: 24px !important;
   }
   .about-protection-image {
     flex: 0 0 30%;
@@ -249,8 +261,6 @@
     max-width: 70px;
     display: flex;
     transform: translateX(-30px);
-    margin-top: 50px;
-    justify-content: flex-end;
   }
 
   .about-protection-image img {
@@ -309,17 +319,20 @@
   .about-protection-row {
     padding-top: 0 !important;
   }
-  .about-protection-image img {
-   max-width: 140px;
+  .about-protection-image {
+    flex: 0 0 100px; 
+    width: 100%;
   }
-  
-  .about-protection-badge.desktop-only {
-    margin-left: 24px;
-    padding-left: 18px !important;
+  .about-protection-image img {
+    max-width: 140px;
+    width: 100%;
+  }
+
+  .about-protection-badge {
     gap: 16px;
-    height: 30px !important;
+    height: 46px !important;
     min-width: 140px !important;
-    width: 140px !important;
+    width: 140px;
     top: -2%;
   }
   .badge-title {
@@ -332,8 +345,6 @@
     justify-content: center;
     height: 40px;
     min-width: 40px;
-    margin-left: 0 !important;
-    margin-right: 10px;
   }
   .badge-icon-shield {
     position: relative;
@@ -376,8 +387,7 @@
     color: #222;
     font-size: 0.8rem;
     font-weight: 500;
-    display: flex
-;
+    display: flex;
     align-items: center;
     gap: 8px;
   }
@@ -390,41 +400,35 @@
 }
 
 @media (max-width: 992px) {
-  .about-protection-section{
+  .about-protection-section {
     margin-top: 0;
-    
   }
   .about-protection-container {
     width: 100%;
     justify-content: center;
     gap: 0;
     padding: 20px;
-    
   }
   .about-protection-image img {
     width: 150px;
-    
   }
-  .about-protection-badge.desktop-only {
-    left: -10% !important;
-    padding-left: 32px !important ;
+  .about-protection-badge {
+    left: 35%;
     gap: 16px;
-    height: 40px;
     min-width: 190px;
     width: 160px;
   }
- .badge-title {
+  .badge-title {
     font-size: 1.5rem;
   }
   .badge-icon {
-   margin-left: 10px;
+    margin-left: 10px;
   }
   .about-protection-title {
     font-size: 1.3rem;
   }
   .about-protection-content {
     text-align: left;
-   
   }
   .about-protection-experience {
     padding: 8px 4px;
@@ -440,8 +444,8 @@
 
 @media (max-width: 1200px) {
   .about-protection-container {
-   width: 100%;
-   justify-content: center;
+    width: 100%;
+    justify-content: center;
   }
   .about-protection-image {
     flex: 0 0 200px;
@@ -449,13 +453,16 @@
   .about-protection-image img {
     width: 200px;
   }
-  .about-protection-badge.desktop-only {
-    left: -20%;
-    padding-left: 18px;
+  .about-protection-badge {
+    transform: translateX(-130%);
     gap: 16px;
+    padding: 10px 0px 10px 10px;
   }
   .about-protection-title {
     font-size: 1.7rem;
+  }
+  .badge-icon {
+    margin-left: 10px;
   }
   .about-protection-desc {
     font-size: 0.8rem;
@@ -477,4 +484,3 @@
     font-size: 1rem;
   }
 }
-
