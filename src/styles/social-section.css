@@ -31,21 +31,32 @@
   filter: brightness(0) invert(1);
 }
 
-@media (max-width: 600px) {
-  .social-section {
-    padding: 12px 0;
-  }
+@media (max-width: 1200px) {
   .social-container {
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 0 50px;
   }
   .social-icon {
-    width: 48px;
-    height: 48px;
+    width: 60px;
+    height: 60px;
   }
   .social-icon img {
-    height: 24px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 992px) {
+  .social-container {
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 0 24px;
+  }
+  .social-icon {
+    width: 50px;
+    height: 50px;
+  }
+  .social-icon img {
+    height: 28px;
   }
 }
 
@@ -65,33 +76,21 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 600px) {
+  .social-section {
+    padding: 12px 0;
+  }
   .social-container {
-    gap: 16px;
+    gap: 20px;
+    justify-content: center;
     flex-wrap: wrap;
-    padding: 0 24px;
   }
   .social-icon {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
   }
   .social-icon img {
-    height: 28px;
+    height: 24px;
   }
 }
-
-@media (max-width: 1200px) {
-  .social-container {
-    max-width: 100%;
-    padding: 0 50px;
-  }
-  .social-icon {
-    width: 60px;
-    height: 60px;
-  }
-  .social-icon img {
-    height: 32px;
-  }
-}
-
 
