@@ -2,7 +2,6 @@
   position: relative;
   z-index: 10;
   width: 100%;
-  display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: -14%;
@@ -25,8 +24,6 @@
   gap: 32px;
   justify-items: center;
   align-items: stretch;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 .offer-cards-wrapper .offer-card.extra {
   justify-self: center;
@@ -123,10 +120,9 @@
 @media (max-width: 1200px) {
   .offer-cards-wrapper {
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
   }
   .offer-card {
-    max-width: 240px;
+    max-width: 260px;
     min-height: 280px;
   }
   .offer-icon {
@@ -148,11 +144,18 @@
 @media (max-width: 992px) {
   .offer-cards-wrapper {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 32px;
+    width: 100%;
   }
   .offer-card {
     max-width: 270px;
     min-height: 320px;
+  }
+  .offer-card:nth-child(2n+1) {
+    transform: translateX(44px); 
+  }
+  .offer-card:nth-child(2n) {
+    transform: translateX(-44px); 
   }
   .offer-icon {
     width: 54px;
@@ -212,6 +215,7 @@
     margin-top: 0;
     padding-left: 12px;
     padding-right: 12px;
+    width: auto;
   }
   .offer-card {
     width: 100%;
@@ -224,6 +228,7 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     margin: 0;
     box-sizing: border-box;
+    transform: none !important;
   }
   .offer-icon {
     width: 40px;

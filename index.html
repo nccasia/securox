@@ -28,9 +28,23 @@
   <body>
     <div class="main-container">
       <!-- ================= HEADER SECTION ================= -->
+      <!-- ================= MOBILE MENU OVERLAY ================= -->
+      <div class="mobile-menu-overlay" id="mobileMenu">
+        <!-- header-container will be moved here by JS when menu is open -->
+        <nav class="mobile-menu-nav">
+          <a href="#">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact Us</a>
+        </nav>
+      </div>
+      <!-- ================= END MOBILE MENU OVERLAY ================= -->
       <header class="main-header">
         <!-- The header-container will be moved dynamically for mobile menu -->
-        <div class="header-container" id="headerContainer">
+        <div
+          class="header-container container container-xl"
+          id="headerContainer"
+        >
           <div class="logo">
             <img src="../public/logoIO.png" alt="Securox IO Logo" />
           </div>
@@ -51,114 +65,103 @@
         </div>
       </header>
       <!-- ================= END HEADER SECTION ================= -->
-      <!-- ================= MOBILE MENU OVERLAY ================= -->
-      <div class="mobile-menu-overlay" id="mobileMenu">
-        <!-- header-container will be moved here by JS when menu is open -->
-        <nav class="mobile-menu-nav">
-          <a href="#">Home</a>
-          <a href="#about">About Us</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact Us</a>
-        </nav>
-      </div>
-      <!-- ================= END MOBILE MENU OVERLAY ================= -->
       <!-- ================= HERO SECTION ================= -->
       <section class="hero-section">
-        <div class="hero-container">
+        <div class="hero-container container container-xl container-lg container-md">
           <div class="hero-image">
-          <div class="image-frame">
-            <img
-              id="toggle-image"
-              src="../public/group.png"
-              alt="Group"
-              class="group-img"
-            />
-          </div>
-          <div class="hero-content">
-            <button class="discover-btn" aria-label="Discover more">
-              Discover more
-              <svg
-                style="margin-left: 6px; vertical-align: middle"
-                width="24"
-                height="24"
-                viewBox="0 0 22 22"
-                aria-hidden="true"
-              >
-                <g
-                  fill="none"
-                  stroke="#fff"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+            <div class="image-frame">
+              <img
+                id="toggle-image"
+                src="../public/group.png"
+                alt="Group"
+                class="group-img"
+              />
+            </div>
+            <div class="hero-content">
+              <button class="discover-btn" aria-label="Discover more">
+                Discover more
+                <svg
+                  style="margin-left: 6px; vertical-align: middle"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 22 22"
+                  aria-hidden="true"
                 >
-                  <path d="M6 16L16 6" />
-                  <path d="M9 6h7v7" />
-                </g>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="services-section">
-          <div class="services-container">
-            <div class="service-card">
-              <h3>Reliable Locksmith</h3>
-              <p>Ultrices placerat amet mus ex adipiscing metus</p>
-              <span class="service-arrow">
-                <svg width="40" height="40" viewBox="0 0 24 24">
                   <g
                     fill="none"
+                    stroke="#fff"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   >
-                    <path d="M6 18L18 6" />
-                    <path d="M9 6h9v9" />
+                    <path d="M6 16L16 6" />
+                    <path d="M9 6h7v7" />
                   </g>
                 </svg>
-              </span>
-            </div>
-            <div class="service-card">
-              <h3>Professional</h3>
-              <p>Ultrices placerat amet mus ex adipiscing metus</p>
-              <span class="service-arrow">
-                <svg width="40" height="40" viewBox="0 0 24 24">
-                  <g
-                    fill="none"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M6 18L18 6" />
-                    <path d="M9 6h9v9" />
-                  </g>
-                </svg>
-              </span>
-            </div>
-            <div class="service-card">
-              <h3>Top Quality</h3>
-              <p>Ultrices placerat amet mus ex adipiscing metus</p>
-              <span class="service-arrow">
-                <svg width="40" height="40" viewBox="0 0 24 24">
-                  <g
-                    fill="none"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M6 18L18 6" />
-                    <path d="M9 6h9v9" />
-                  </g>
-                </svg>
-              </span>
+              </button>
             </div>
           </div>
-        </div>
+          <div class="services-section">
+            <div class="services-container">
+              <div class="service-card">
+                <h3>Reliable Locksmith</h3>
+                <p>Ultrices placerat amet mus ex adipiscing metus</p>
+                <span class="service-arrow">
+                  <svg width="40" height="40" viewBox="0 0 24 24">
+                    <g
+                      fill="none"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M6 18L18 6" />
+                      <path d="M9 6h9v9" />
+                    </g>
+                  </svg>
+                </span>
+              </div>
+              <div class="service-card">
+                <h3>Professional</h3>
+                <p>Ultrices placerat amet mus ex adipiscing metus</p>
+                <span class="service-arrow">
+                  <svg width="40" height="40" viewBox="0 0 24 24">
+                    <g
+                      fill="none"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M6 18L18 6" />
+                      <path d="M9 6h9v9" />
+                    </g>
+                  </svg>
+                </span>
+              </div>
+              <div class="service-card">
+                <h3>Top Quality</h3>
+                <p>Ultrices placerat amet mus ex adipiscing metus</p>
+                <span class="service-arrow">
+                  <svg width="40" height="40" viewBox="0 0 24 24">
+                    <g
+                      fill="none"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M6 18L18 6" />
+                      <path d="M9 6h9v9" />
+                    </g>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- ================= END HERO SECTION ================= -->
       <!-- ================= ABOUT PROTECTION SECTION ================= -->
       <section class="about-protection-section" id="about">
-        <div class="about-protection-container">
+        <div class="about-protection-container container container-xl container-lg container-md">
           <div class="about-protection-banner mobile-only">
             <span>Who we are ?</span>
             <span class="banner-icon">
@@ -167,8 +170,16 @@
           </div>
           <div class="about-protection-row">
             <div class="about-protection-image">
-              <img src="../public/fingertwo.png" class="desktop-only" alt="Fingertwo pointing" />
-              <img src="../public/finger.png" class="mobile-only" alt="Finger pointing" />
+              <img
+                src="../public/fingertwo.png"
+                class="desktop-only"
+                alt="Fingertwo pointing"
+              />
+              <img
+                src="../public/finger.png"
+                class="mobile-only"
+                alt="Finger pointing"
+              />
             </div>
             <div class="about-protection-content">
               <h3 class="about-protection-subtitle">Who we are ?</h3>
@@ -199,30 +210,30 @@
             </ul>
           </div>
         </div>
-      </section>  
+      </section>
       <!-- ================= END ABOUT PROTECTION SECTION ================= -->
       <!-- ================= SERVICES OFFER SECTION ================= -->
       <section class="services-offer-section" id="services">
-       <div class="services-offer-container">
-         <div class="services-offer-banner">
-          <img
-            src="../public/banner.png"
-            alt="Banner"
-            class="services-offer-bg"
-          />
-          <div class="services-offer-content">
+        <div class="services-offer-container">
+          <div class="services-offer-content container container-xl container-lg container-md">
             <h2 class="services-offer-title">What we offer</h2>
             <p class="services-offer-desc">
               Common categories of software security services
             </p>
           </div>
         </div>
-       </div>
+        <div>
+          <img
+            src="../public/banner.png"
+            alt="Banner"
+            class="services-offer-bg"
+          />
+        </div>
       </section>
       <!--==========================MERGED-CARDS-SECTION================================-->
       <section class="merged-cards-section">
         <img src="../public/map.png" alt="Map" class="map-under-cards" />
-        <div class="offer-cards-wrapper">
+        <div class="offer-cards-wrapper container container-xl container-lg container-md">
           <div class="offer-card">
             <div class="offer-icon icon1"></div>
             <h3>Static Application Security testing - SAST</h3>
@@ -296,7 +307,7 @@
       <!-- ================= END MERGER CARDS SECTION ================= -->
       <!-- ================= FOOTER SECTION ================= -->
       <footer class="footer-section" id="contact">
-        <div class="footer-container">
+        <div class="footer-container container container-xl container-lg container-md">
           <div class="footer-left">
             <div class="footer-logo">
               <img
@@ -361,7 +372,7 @@
       <!-- ================= END FOOTER SECTION ================= -->
       <!-- ================= SOCIAL MEDIA SECTION ================= -->
       <section class="social-section">
-        <div class="social-container">
+        <div class="social-container container container-xl container-lg container-md">
           <a class="social-icon">
             <img src="../public/twitter.png" alt="Twitter" />
           </a>

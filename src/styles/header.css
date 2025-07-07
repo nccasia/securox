@@ -15,7 +15,6 @@
   height: 56px;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 180px;
 }
 .logo {
   width: 48px;
@@ -114,7 +113,6 @@
 @media (max-width: 1200px) {
   .header-container {
     justify-content: space-between;
-    padding: 0 40px;
   }
   .logo {
     margin-right: 0;
@@ -150,6 +148,7 @@
   }
   .menu-icon {
     display: flex; 
+    align-items: end;
   }
   .get-started {
     display: none ; 
