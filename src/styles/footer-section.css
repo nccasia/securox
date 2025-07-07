@@ -67,7 +67,6 @@
 .footer-right p {
   font-size: 0.98rem;
   margin-bottom: 18px;
-  color: #d0dbe6;
 }
 .footer-newsletter {
   display: flex;
@@ -149,14 +148,13 @@
   .footer-left, .footer-right {
     width: 100%;
     display: flex;
-    align-items: center;
     flex-direction: column;
   }
   .footer-right h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .footer-right p {
-    font-size: 0.8rem;
+    font-size: 0.98rem;
   }
   .footer-newsletter input[type="email"] {
     font-size: 0.9rem;

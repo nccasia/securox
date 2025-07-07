@@ -291,7 +291,6 @@
   .about-protection-image {
     flex: 0 0 30%;
     max-width: 30%;
-    max-width: 70px;
     display: flex;
     transform: translateX(-15px);
   }
