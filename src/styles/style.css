@@ -48,6 +48,7 @@ html, body {
 
 .main-container {
   margin: 0 auto;
+  width: auto;
   box-sizing: border-box;
 }
 
