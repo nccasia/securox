@@ -10,11 +10,12 @@
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: nowrap;
   height: 56px;
   margin: 0 auto;
   box-sizing: border-box;
+  padding: 0 180px;
 }
 .logo {
   width: 48px;
@@ -24,7 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 500px;
+  margin-right: 0;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -38,8 +39,8 @@
   display: flex;
   align-items: center;
   gap: 28px;
-  margin-right: 10px;
-  justify-content: flex-end;
+  margin-left: auto;
+  justify-content: center;
 }
 .nav-menu a {
   color: #b2e9d6;
@@ -112,10 +113,11 @@
 
 @media (max-width: 1200px) {
   .header-container {
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 40px;
   }
   .logo {
-    margin-right: 15%;
+    margin-right: 0;
   }
 }
 

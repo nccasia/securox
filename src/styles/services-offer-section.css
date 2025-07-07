@@ -80,12 +80,12 @@
 
 @media (max-width: 600px) {
   .services-offer-section {
-    padding: 10px;
     min-height: unset;
     top: 0;
   }
   .services-offer-banner {
     position: relative;
+    padding: 10px;
   }
   .services-offer-bg {
     height: 180px;

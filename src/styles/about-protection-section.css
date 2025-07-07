@@ -199,9 +199,10 @@
   .about-protection-container {
     width: 100%;
     justify-content: center;
+    margin: 0 auto;
   }
   .about-protection-row {
-    padding-top: 0 ;
+   padding: 0 15px;
   }
   .about-protection-image {
     flex: 0 0 100px; 
@@ -213,20 +214,25 @@
   }
   .about-protection-title {
     font-size: 1rem ;
+    margin-bottom: 0;
   }
   .about-protection-content {
     text-align: left;
     margin-top: -10px;
+    padding-left: 20px;
+    
   }
   .about-protection-desc {
     margin-bottom: 5px;
   }
   .about-protection-details {
     align-items: center;
+    
   }
   .about-protection-experience {
     padding: 8px 4px;
     min-width: 50px;
+    margin: 0 4px;
   }
   .about-protection-list {
     display: flex;
@@ -287,7 +293,7 @@
     max-width: 30%;
     max-width: 70px;
     display: flex;
-    transform: translateX(-30px);
+    transform: translateX(-15px);
   }
 
   .about-protection-image img {
@@ -314,7 +320,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 4px;
+    gap: 12px;
     /* box-sizing: border-box; */
   }
   .about-protection-list {
