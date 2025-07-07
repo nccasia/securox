@@ -66,7 +66,12 @@
       <section class="hero-section">
         <div class="hero-image">
           <div class="image-frame">
-            <img id="toggle-image" src="../public/group.png" alt="Group" class="group-img" />
+            <img
+              id="toggle-image"
+              src="../public/group.png"
+              alt="Group"
+              class="group-img"
+            />
           </div>
           <div class="hero-content">
             <button class="discover-btn" aria-label="Discover more">
@@ -152,16 +157,16 @@
       <!-- ================= ABOUT PROTECTION SECTION ================= -->
       <section class="about-protection-section" id="about">
         <div class="about-protection-container">
-          <div class="about-protection-badge">
-                <span class="badge-title">securox</span>
-                <span class="badge-icon">
-                  <img src="../public/white circle.png" alt="White Circle" class="badge-icon-img" />
-                  <img src="../public/shield.png" alt="Shield" class="badge-icon-shield" />
-                </span>
-              </div>
+          <div class="about-protection-banner mobile-only">
+            <span>Who we are ?</span>
+            <span class="banner-icon">
+              <img src="public/shield.png" alt="shield icon" />
+            </span>
+          </div>
           <div class="about-protection-row">
             <div class="about-protection-image">
-              <img src="../public/finger.png" alt="Finger pointing" />
+              <img src="../public/fingertwo.png" class="desktop-only" alt="Fingertwo pointing" />
+              <img src="../public/finger.png" class="mobile-only" alt="Finger pointing" />
             </div>
             <div class="about-protection-content">
               <h3 class="about-protection-subtitle">Who we are ?</h3>
@@ -176,21 +181,21 @@
             </div>
           </div>
           <div class="about-protection-details">
-                <ul class="about-protection-list">
-                  <li><span class="check"></span> Professional</li>
-                  <li><span class="check"></span> Certified</li>
-                  <li><span class="check"></span> Commitments</li>
-                </ul>
-                <div class="about-protection-experience">
-                  <div class="years">10+</div>
-                  <div class="years-label">Years Experience</div>
-                </div>
-                <ul class="about-protection-list">
-                  <li><span class="check"></span> Top Quality</li>
-                  <li><span class="check"></span> Expertise</li>
-                  <li><span class="check"></span> Support</li>
-                </ul>
-              </div>
+            <ul class="about-protection-list">
+              <li><span class="check"></span> Professional</li>
+              <li><span class="check"></span> Certified</li>
+              <li><span class="check"></span> Commitments</li>
+            </ul>
+            <div class="about-protection-experience">
+              <div class="years">10+</div>
+              <div class="years-label">Years Experience</div>
+            </div>
+            <ul class="about-protection-list">
+              <li><span class="check"></span> Top Quality</li>
+              <li><span class="check"></span> Expertise</li>
+              <li><span class="check"></span> Support</li>
+            </ul>
+          </div>
         </div>
       </section>
       <!-- ================= END ABOUT PROTECTION SECTION ================= -->
@@ -233,7 +238,8 @@
             <div class="offer-icon icon3"></div>
             <h3>Mobile Application Security testing - MAST</h3>
             <p>
-              Analyzing mobile applications to identify security vulnerabilities.
+              Analyzing mobile applications to identify security
+              vulnerabilities.
             </p>
             <button class="offer-btn">Learn more</button>
           </div>
@@ -355,10 +361,10 @@
           <a class="social-icon">
             <img src="../public/twitter.png" alt="Twitter" />
           </a>
-          <a  class="social-icon">
+          <a class="social-icon">
             <img src="../public/f.png" alt="Facebook" />
           </a>
-          <a  class="social-icon">
+          <a class="social-icon">
             <img src="../public/g.png" alt="Google" />
           </a>
         </div>
@@ -366,18 +372,5 @@
       <!-- ================= END SOCIAL MEDIA SECTION ================= -->
     </div>
     <script src="src/scripts.js"></script>
-    <script>
-    function updateBadgeTitle() {
-      document.querySelectorAll('.badge-title').forEach(badgeTitle => {
-        if (window.matchMedia('(max-width: 600px)').matches) {
-          badgeTitle.textContent = 'Who we are ?';
-        } else {
-          badgeTitle.textContent = 'securox';
-        }
-      });
-    }
-    window.addEventListener('DOMContentLoaded', updateBadgeTitle);
-    window.addEventListener('resize', updateBadgeTitle);
-    </script>
   </body>
 </html>
