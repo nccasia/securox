@@ -200,11 +200,14 @@
     max-width: 90vw;
     width: 100%;
     justify-content: center;
+    align-items: stretch;
   }
   .service-card {
     min-width: 200px;
     padding: 24px 16px 18px 16px;
     align-items: center;
+    display: flex;
+    flex-direction: column;
   }
   .service-card svg {
     width: 56px;
@@ -254,11 +257,14 @@
     max-width: 90vw;
     width: 100%;
     justify-content: center;
+    align-items: stretch;
   }
   .service-card {
     min-width: 90px;
     padding: 10px 8px 8px 8px;
     font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
   }
   .service-card h3 {
     font-size: 1rem;
