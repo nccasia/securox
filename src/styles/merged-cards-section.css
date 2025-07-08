@@ -144,18 +144,14 @@
 @media (max-width: 992px) {
   .offer-cards-wrapper {
     grid-template-columns: repeat(2, 1fr);
+    max-width: 650px;
     gap: 32px;
     width: 100%;
+    margin: 0 auto;
   }
   .offer-card {
     max-width: 270px;
     min-height: 320px;
-  }
-  .offer-card:nth-child(2n+1) {
-    transform: translateX(44px); 
-  }
-  .offer-card:nth-child(2n) {
-    transform: translateX(-44px); 
   }
   .offer-icon {
     width: 54px;
@@ -177,6 +173,9 @@
   .offer-cards-wrapper {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    max-width: 550px;
+    width: 100%;
+    margin: 0 auto;
   }
   .offer-card {
     max-width: 240px;

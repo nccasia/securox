@@ -180,7 +180,7 @@
   }
   .about-protection-content {
     text-align: left;
-    margin-top: -50px;
+    margin-top: -110px;
     padding-left: 20px;
   }
   .about-protection-subtitle {
@@ -232,7 +232,7 @@
   .about-protection-content {
     text-align: left;
     padding-left: 20px;
-    
+    margin-top: -50px;
   }
   .about-protection-desc {
     margin-bottom: 5px;
@@ -304,6 +304,8 @@
   .about-protection-image {
     max-width: 30%;
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .about-protection-image img {
