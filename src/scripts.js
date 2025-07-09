@@ -151,15 +151,18 @@ document.addEventListener("DOMContentLoaded", function () {
       const emailInput = newsletterForm.querySelector('input[type="email"]');
       const email = emailInput ? emailInput.value.trim() : "";
       if (!email) {
-        alert("Please enter a valid email address.");
+        // alert("Please enter a valid email address.");
+        // Optionally, show inline error here
         return;
       }
       const result = await sendEmail(email);
       if (result) {
-        alert("Thank you for signing up!");
+        // alert("Thank you for signing up!");
         newsletterForm.reset();
+        // Optionally, show inline success here
       } else {
-        alert("Failed to send. Please try again later.");
+        // alert("Failed to send. Please try again later.");
+        // Optionally, show inline error here
       }
     });
   }
