@@ -1,99 +1,98 @@
-
-  // ================= MENU TOGGLE SCRIPT =================
-  // Move header-container into mobile-menu-overlay when menu is open
-  const menuIcon = document.getElementById("menuIcon");
-  const mobileMenu = document.getElementById("mobileMenu");
-  const headerContainer = document.getElementById("headerContainer");
-  let headerParent = headerContainer ? headerContainer.parentNode : null;
-  let headerNext = headerContainer ? headerContainer.nextSibling : null;
-  if (menuIcon && mobileMenu && headerContainer) {
-    menuIcon.addEventListener("click", function (e) {
-      e.stopPropagation();
-      if (!mobileMenu.classList.contains("active")) {
-        // Open menu
-        document.body.classList.add("mobile-menu-open");
-        mobileMenu.classList.add("active");
-        mobileMenu.insertBefore(headerContainer, mobileMenu.firstChild);
-        menuIcon.classList.add("active");
+// ================= MENU TOGGLE SCRIPT =================
+// Move header-container into mobile-menu-overlay when menu is open
+const menuIcon = document.getElementById("menuIcon");
+const mobileMenu = document.getElementById("mobileMenu");
+const headerContainer = document.getElementById("headerContainer");
+let headerParent = headerContainer ? headerContainer.parentNode : null;
+let headerNext = headerContainer ? headerContainer.nextSibling : null;
+if (menuIcon && mobileMenu && headerContainer) {
+  menuIcon.addEventListener("click", function (e) {
+    e.stopPropagation();
+    if (!mobileMenu.classList.contains("active")) {
+      // Open menu
+      document.body.classList.add("mobile-menu-open");
+      mobileMenu.classList.add("active");
+      mobileMenu.insertBefore(headerContainer, mobileMenu.firstChild);
+      menuIcon.classList.add("active");
+    } else {
+      closeMenu();
+    }
+  });
+  mobileMenu.addEventListener("click", function (e) {
+    if (e.target === mobileMenu) {
+      closeMenu();
+    }
+  });
+  function closeMenu() {
+    document.body.classList.remove("mobile-menu-open");
+    mobileMenu.classList.remove("active");
+    menuIcon.classList.remove("active");
+    if (headerParent) {
+      if (headerNext) {
+        headerParent.insertBefore(headerContainer, headerNext);
       } else {
-        closeMenu();
-      }
-    });
-    mobileMenu.addEventListener("click", function (e) {
-      if (e.target === mobileMenu) {
-        closeMenu();
-      }
-    });
-    function closeMenu() {
-      document.body.classList.remove("mobile-menu-open");
-      mobileMenu.classList.remove("active");
-      menuIcon.classList.remove("active");
-      if (headerParent) {
-        if (headerNext) {
-          headerParent.insertBefore(headerContainer, headerNext);
-        } else {
-          headerParent.appendChild(headerContainer);
-        }
+        headerParent.appendChild(headerContainer);
       }
     }
-    // Optional: close menu on nav click
-    mobileMenu
-      .querySelectorAll("a")
-      .forEach((a) => a.addEventListener("click", closeMenu));
   }
+  // Optional: close menu on nav click
+  mobileMenu
+    .querySelectorAll("a")
+    .forEach((a) => a.addEventListener("click", closeMenu));
+}
 
-  // ================= NAVBAR SMOOTH SCROLL SCRIPT =================
-  function scrollToSection(id) {
-    const section = document.getElementById(id);
-    if (section) {
-      const headerOffset = 56;
-      const elementPosition =
-        section.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - headerOffset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  }
-  function scrollToTop() {
+// ================= NAVBAR SMOOTH SCROLL SCRIPT =================
+function scrollToSection(id) {
+  const section = document.getElementById(id);
+  if (section) {
+    const headerOffset = 56;
+    const elementPosition =
+      section.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition - headerOffset;
     window.scrollTo({
-      top: 0,
-      left: 0,
+      top: offsetPosition,
       behavior: "smooth",
     });
   }
+}
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+}
 
-  document.querySelectorAll(".nav-menu a").forEach((link) => {
-    link.addEventListener("click", function (e) {
-      const href = link.getAttribute("href");
+document.querySelectorAll(".nav-menu a").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    const href = link.getAttribute("href");
+    if (href === "#") {
+      e.preventDefault();
+      scrollToTop();
+    } else if (href.startsWith("#")) {
+      e.preventDefault();
+      scrollToSection(href.substring(1));
+    }
+  });
+});
+
+document.querySelectorAll(".mobile-menu-nav a").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    const href = link.getAttribute("href");
+    e.preventDefault();
+
+    document.getElementById("mobileMenu").classList.remove("active");
+    document.body.classList.remove("mobile-menu-open");
+
+    setTimeout(() => {
       if (href === "#") {
-        e.preventDefault();
         scrollToTop();
       } else if (href.startsWith("#")) {
-        e.preventDefault();
         scrollToSection(href.substring(1));
       }
-    });
+    }, 200);
   });
-
-  document.querySelectorAll(".mobile-menu-nav a").forEach((link) => {
-    link.addEventListener("click", function (e) {
-      const href = link.getAttribute("href");
-      e.preventDefault();
-
-      document.getElementById("mobileMenu").classList.remove("active");
-      document.body.classList.remove("mobile-menu-open");
-
-      setTimeout(() => {
-        if (href === "#") {
-          scrollToTop();
-        } else if (href.startsWith("#")) {
-          scrollToSection(href.substring(1));
-        }
-      }, 200);
-    });
-  });
+});
 
 // ================= MOBILE ONLY: MOVE DETAILS SCRIPT =================
 function moveProtectionDetails() {
@@ -117,26 +116,29 @@ window.addEventListener("DOMContentLoaded", moveProtectionDetails);
 // Add sendEmail function at the end of the file
 async function sendEmail(email) {
   try {
-    const response = await fetch('https://email.ncc.asia/ncc-site-api-sendmail', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        email: email,
-        content: 'From Securox'
-      })
-    });
+    const response = await fetch(
+      "https://email.ncc.asia/ncc-site-api-sendmail",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+          content: "From Securox",
+        }),
+      }
+    );
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
     const result = await response.json();
-    console.log('Email sent successfully:', result);
+    console.log("Email sent successfully:", result);
     return result;
   } catch (error) {
-    console.error('Failed to send email:', error);
+    console.error("Failed to send email:", error);
     return null;
   }
 }
@@ -147,17 +149,17 @@ document.addEventListener("DOMContentLoaded", function () {
     newsletterForm.addEventListener("submit", async function (e) {
       e.preventDefault();
       const emailInput = newsletterForm.querySelector('input[type="email"]');
-      const email = emailInput ? emailInput.value.trim() : '';
+      const email = emailInput ? emailInput.value.trim() : "";
       if (!email) {
-        alert('Please enter a valid email address.');
+        alert("Please enter a valid email address.");
         return;
       }
       const result = await sendEmail(email);
       if (result) {
-        alert('Thank you for signing up!');
+        alert("Thank you for signing up!");
         newsletterForm.reset();
       } else {
-        alert('Failed to send. Please try again later.');
+        alert("Failed to send. Please try again later.");
       }
     });
   }
