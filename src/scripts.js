@@ -158,6 +158,10 @@ function showToast(message, isError = false) {
   }, 3500);
 }
 
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const newsletterForm = document.querySelector(".footer-newsletter");
   if (newsletterForm) {
@@ -166,6 +170,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const emailInput = newsletterForm.querySelector('input[type="email"]');
       const email = emailInput ? emailInput.value.trim() : "";
       if (!email) {
+        return;
+      }
+      if (!isValidEmail(email)) {
+        showToast("Please enter a valid email address.", true);
         return;
       }
       const result = await sendEmail(email);
