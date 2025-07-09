@@ -8,11 +8,12 @@
 .footer-container {
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: start;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 140px;
+  gap: 40px;
   margin: 0 auto;
+  align-items: stretch;
 }
 .footer-left,
 .footer-right {
@@ -24,6 +25,7 @@
   flex: 1 1 350px;
   display: flex;
   flex-direction: column;
+  height: 100%;
  
 }
 .footer-logo {
@@ -32,7 +34,7 @@
   margin-bottom: 20px;
 }
 .footer-logo-img {
-  height: 80px;
+  height: 100px;
   margin-right: 10px;
 }
 
@@ -43,29 +45,29 @@
 }
 .footer-contact li {
   display: flex;
+  margin-top: 20px;
   align-items: center;
-  margin-bottom: 16px;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 .footer-icon {
-  height: 22px;
-  margin-right: 10px;
+  display: flex;
   align-items: center;
+  height: 22px;
+  margin-right: 6px;
   justify-content: center;
 }
 .footer-right {
-  flex: 1 1 350px;
-  margin-bottom: 20px;
+  flex: 1 1 350px;  
   display: flex;
   flex-direction: column;
 }
 .footer-right h3 {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   font-weight: 700;
   margin-bottom: 8px;
 }
 .footer-right p {
-  font-size: 0.98rem;
+  font-size: 1.2rem;
   margin-bottom: 18px;
 }
 .footer-newsletter {
@@ -104,6 +106,44 @@
 .footer-icon-btn {
   height: 22px;
 }
+.footer-locations {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.footer-locations h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.footer-location-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-location-columns {
+  display: flex;
+  gap: 32px;
+}
+.footer-location-list.left,
+.footer-location-list.right {
+  flex: 1 1 0;
+  padding: 0;
+  margin: 0;
+}
+.footer-location-list.left li strong,
+.footer-location-list.right li strong {
+  white-space: nowrap;
+  margin-right: 5px;
+}
+.footer-location-list.left li,
+.footer-location-list.right li {
+  display: flex;
+  align-items: start;
+  white-space: normal;
+  margin-bottom: 12px;
+  font-size: 0.98rem;
+}
 
 /* Tablet Responsive Styles */
 @media (max-width: 1200px) {
@@ -127,15 +167,31 @@
     justify-content: center;
   }
   .footer-right h3 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
   .footer-right p {
-    font-size: 0.98rem;
+    font-size: 1.1rem;
   }
   .footer-newsletter input[type="email"] {
     font-size: 0.95rem;
   }
   .footer-newsletter button {
+    font-size: 0.95rem;
+  }
+  .footer-locations {
+    width: 100%;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+  .footer-location-columns {
+    flex-direction: column;
+    gap: 0;
+  }
+  .footer-location-list.left,
+  .footer-location-list.right {
+    width: 100%;
+  }
+  .footer-location-list li {
     font-size: 0.95rem;
   }
 }
@@ -164,6 +220,14 @@
   }
   .footer-newsletter button {
     font-size: 0.9rem;
+  }
+  .footer-locations {
+    align-items: center;
+    padding: 0 20px;
+  }
+  .footer-location-list li {
+    font-size: 0.9rem;
+    justify-content: center;
   }
 }
 
@@ -220,5 +284,16 @@
   }
   .footer-icon-btn {
     height: 18px;
+  }
+  .footer-locations {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .footer-location-list li {
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
   }
 }

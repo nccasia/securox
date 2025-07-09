@@ -1,30 +1,3 @@
-// ================= SCRIPTS FOR INTERACTION =================
-document.addEventListener("DOMContentLoaded", function () {
-  // Toggle image based on which service card is clicked
-  const toggleImg = document.getElementById("toggle-image");
-  const serviceCards = document.querySelectorAll(".service-card");
-  if (toggleImg && serviceCards.length > 0) {
-    serviceCards.forEach(function (card, index) {
-      card.addEventListener("click", function () {
-        let nextImage = "";
-        let nextAlt = "";
-        let nextClass = "";
-        if (index === 0 || index === 2) {
-          nextImage = "../public/group.png";
-          nextAlt = "Group";
-          nextClass = "group-img";
-        } else if (index === 1) {
-          nextImage = "../public/two-people.png";
-          nextAlt = "Two People";
-          nextClass = "two-people-img";
-        }
-        toggleImg.src = nextImage;
-        toggleImg.alt = nextAlt;
-        toggleImg.classList.remove("group-img", "two-people-img");
-        toggleImg.classList.add(nextClass);
-      });
-    });
-  }
 
   // ================= MENU TOGGLE SCRIPT =================
   // Move header-container into mobile-menu-overlay when menu is open
@@ -121,7 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 200);
     });
   });
-});
 
 // ================= MOBILE ONLY: MOVE DETAILS SCRIPT =================
 function moveProtectionDetails() {
@@ -142,64 +114,51 @@ function moveProtectionDetails() {
 window.addEventListener("resize", moveProtectionDetails);
 window.addEventListener("DOMContentLoaded", moveProtectionDetails);
 
-// ================= HERO IMAGE TAP SWITCH FOR MOBILE =================
-function handleHeroImageTapMobile() {
-  const heroImg = document.getElementById("toggle-image");
-  if (!heroImg) return;
-  heroImg.onclick = null;
-  if (window.innerWidth <= 600) {
-    heroImg.onclick = function (e) {
-      const rect = heroImg.getBoundingClientRect();
-      const x = e.touches ? e.touches[0].clientX : e.clientX;
-      const mid = rect.left + rect.width / 2;
-      if (x < mid) {
-        heroImg.src = "../public/group.png";
-        heroImg.alt = "Group";
-        heroImg.classList.remove("two-people-img");
-        heroImg.classList.add("group-img");
-      } else {
-        heroImg.src = "../public/two-people.png";
-        heroImg.alt = "Two People";
-        heroImg.classList.remove("group-img");
-        heroImg.classList.add("two-people-img");
-      }
-    };
-    // Support both touch and click for mobile
-    heroImg.addEventListener("touchstart", heroImg.onclick);
-    heroImg.addEventListener("click", heroImg.onclick);
-  } else {
-    // Remove mobile listeners on desktop
-    heroImg.removeEventListener("touchstart", heroImg.onclick);
-    heroImg.removeEventListener("click", heroImg.onclick);
+// Add sendEmail function at the end of the file
+async function sendEmail(email) {
+  try {
+    const response = await fetch('https://email.ncc.asia/ncc-site-api-sendmail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email: email,
+        content: 'From Securox'
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const result = await response.json();
+    console.log('Email sent successfully:', result);
+    return result;
+  } catch (error) {
+    console.error('Failed to send email:', error);
+    return null;
   }
 }
-window.addEventListener("resize", handleHeroImageTapMobile);
-window.addEventListener("DOMContentLoaded", handleHeroImageTapMobile);
-
-function updateAboutProtectionDesc() {
-  const desc = document.getElementById("about-protection-desc");
-  if (!desc) return;
-  const mobileText =
-    "Securox is a specialized penetration testing firm with certified professionals who deliver reliable, top quality security assessments. Our proven methodologies and secure testing processes help businesses stay protected against evolving cyber threats.";
-  const defaultText =
-    "Securox is a specialized penetration testing firm with certified professionals who deliver reliable security assessments using proven methodologies. We maintain top quality standards while providing comprehensive vulnerability detection that helps businesses stay ahead of cyber threats. Our secure testing processes and professional expertise ensure your digital assets receive the protection they deserve.";
-
-  if (window.innerWidth <= 600) {
-    desc.textContent = mobileText;
-  } else {
-    desc.textContent = defaultText;
-  }
-}
-
-window.addEventListener("DOMContentLoaded", updateAboutProtectionDesc);
-window.addEventListener("resize", updateAboutProtectionDesc);
 
 document.addEventListener("DOMContentLoaded", function () {
   const newsletterForm = document.querySelector(".footer-newsletter");
   if (newsletterForm) {
-    newsletterForm.addEventListener("submit", function (e) {
+    newsletterForm.addEventListener("submit", async function (e) {
       e.preventDefault();
-      alert("Đăng ký nhận tin thành công!");
+      const emailInput = newsletterForm.querySelector('input[type="email"]');
+      const email = emailInput ? emailInput.value.trim() : '';
+      if (!email) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+      const result = await sendEmail(email);
+      if (result) {
+        alert('Thank you for signing up!');
+        newsletterForm.reset();
+      } else {
+        alert('Failed to send. Please try again later.');
+      }
     });
   }
 });

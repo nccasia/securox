@@ -31,8 +31,6 @@
 }
 
 @media (max-width: 1200px) {
-  .social-container {
-  }
   .social-icon {
     width: 60px;
     height: 60px;

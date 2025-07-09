@@ -12,7 +12,7 @@
 }
 .about-protection-row {
   display: flex;
-  align-items: center;
+  align-items: start;
 }
 .about-protection-image {
   position: relative;
@@ -28,7 +28,7 @@
   z-index: 1;
 }
 .about-protection-content {
-  margin-top: -10%;
+  margin-top: 0;
 }
 .about-protection-subtitle {
   color: #1de782;
@@ -142,7 +142,7 @@
   }
   .about-protection-content {
     padding-left: 50px;
-    margin-top: -18%;
+    margin-top: 0;
   }
   .about-protection-details {
     gap: 18px;
@@ -152,10 +152,10 @@
     min-width: 80px;
   }
   .years {
-    font-size: 3.2rem;
+    font-size: 5rem;
   }
   .years-label {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -180,7 +180,7 @@
   }
   .about-protection-content {
     text-align: left;
-    margin-top: -8%;
+    margin-top: 0%;
     padding-left: 20px;
   }
   .about-protection-subtitle {
@@ -228,7 +228,7 @@
   .about-protection-content {
     text-align: left;
     padding-left: 20px;
-    /* margin-top: 0; */
+    margin-top: 0;
   }
   .about-protection-subtitle {
     font-size: 1.7rem;
@@ -292,7 +292,7 @@
     flex: 0 0 70%;
     max-width: 70%;
     padding-left: 0;
-    margin-top: 20px;
+    margin-top: 5px;
   }
   .about-protection-subtitle {
     display: none;
@@ -300,9 +300,10 @@
   .about-protection-row {
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
     padding-left: 12px;
+    margin: 0 auto;
   }
   .about-protection-image {
     max-width: 30%;
@@ -335,7 +336,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 12px;
+    gap: 18px;
     /* box-sizing: border-box; */
   }
   .about-protection-list {
@@ -343,18 +344,15 @@
     font-size: 0.95rem;
   }
   .about-protection-list li {
-    font-size: 0.7rem !important;
+    font-size: 0.75rem !important;
     gap: 1px !important;
     margin-top: 3px;
-  }
-  .about-protection-experience {
-    padding: 6px 2px;
   }
   .years {
     font-size: 3.5rem;
   }
   .years-label {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
   .about-protection-banner {
     display: flex !important;
