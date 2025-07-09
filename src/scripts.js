@@ -143,6 +143,21 @@ async function sendEmail(email) {
   }
 }
 
+function showToast(message, isError = false) {
+  const newsletterForm = document.querySelector(".footer-newsletter");
+  if (!newsletterForm) return;
+  const toast = newsletterForm.querySelector(".toast");
+  if (!toast) return;
+  toast.textContent = message;
+  toast.classList.remove("error");
+  if (isError) toast.classList.add("error");
+  toast.classList.add("show");
+  setTimeout(() => {
+    toast.classList.remove("show");
+    toast.classList.remove("error");
+  }, 3500);
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const newsletterForm = document.querySelector(".footer-newsletter");
   if (newsletterForm) {
@@ -151,18 +166,14 @@ document.addEventListener("DOMContentLoaded", function () {
       const emailInput = newsletterForm.querySelector('input[type="email"]');
       const email = emailInput ? emailInput.value.trim() : "";
       if (!email) {
-        // alert("Please enter a valid email address.");
-        // Optionally, show inline error here
         return;
       }
       const result = await sendEmail(email);
       if (result) {
-        // alert("Thank you for signing up!");
         newsletterForm.reset();
-        // Optionally, show inline success here
+        showToast("Thank you for signing up!");
       } else {
-        // alert("Failed to send. Please try again later.");
-        // Optionally, show inline error here
+        showToast("Failed to send. Please try again later.", true);
       }
     });
   }

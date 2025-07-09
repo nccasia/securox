@@ -144,12 +144,56 @@
   margin-bottom: 12px;
   font-size: 0.98rem;
 }
+/* style toast */
+.footer-newsletter {
+  position: relative;
+}
+
+.footer-newsletter .toast {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -50px;
+  min-width: 180px;
+  max-width: 90%;
+  background: #27ae60; 
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-size: 15px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  visibility: hidden;
+ 
+}
+.footer-newsletter .toast.show {
+  opacity: 1;
+  visibility: visible;
+}
+.footer-newsletter .toast.error {
+  background: #e74c3c;
+}
 
 /* Tablet Responsive Styles */
 @media (max-width: 1200px) {
   .footer-container {
     justify-content: center;
     box-sizing: border-box;
+  }
+  .footer-newsletter .toast {
+    min-width: 250px;
+    max-width: 95vw;
+    font-size: 14px;
+    padding: 9px 10px;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.10);
   }
 }
 
@@ -194,6 +238,17 @@
   .footer-location-list li {
     font-size: 0.95rem;
   }
+  .footer-newsletter .toast {
+    min-width: 250px;
+    max-width: 95vw;
+    font-size: 14px;
+    padding: 9px 10px;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.10);
+  }
 }
 
 @media (max-width: 768px) {
@@ -224,10 +279,22 @@
   .footer-locations {
     align-items: center;
     padding: 0 20px;
+    margin-top: 20px;
   }
   .footer-location-list li {
     font-size: 0.9rem;
     justify-content: center;
+  }
+  .footer-newsletter .toast {
+    min-width: 250px;
+    max-width: 95vw;
+    font-size: 14px;
+    padding: 9px 10px;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.10);
   }
 }
 
@@ -289,11 +356,23 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
+    margin-top: 30px;
   }
   .footer-location-list li {
     display: flex;
     align-items: flex-start;
     font-size: 0.8rem;
     margin-bottom: 8px;
+  }
+  .footer-newsletter .toast {
+    min-width: 180px;
+    max-width: 95vw;
+    font-size: 10px;
+    padding: 9px 10px;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.10);
   }
 }
