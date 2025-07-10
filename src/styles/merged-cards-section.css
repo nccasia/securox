@@ -38,7 +38,7 @@
     width: 100%;
     max-width: 310px;
     margin: 0;
-    min-height: 320px;
+    min-height: 380px;
     padding: 2.5vw 1.8vw 1.8vw 1.8vw;
     text-align: center;
     display: flex;
@@ -125,7 +125,7 @@
   }
   .offer-card {
     max-width: 260px;
-    min-height: 280px;
+    min-height: 320px;
   }
   .offer-icon {
     width: 48px;
@@ -153,7 +153,7 @@
   }
   .offer-card {
     max-width: 270px;
-    min-height: 320px;
+    min-height: 310px;
   }
   .offer-icon {
     width: 54px;
@@ -180,7 +180,7 @@
     margin: 0 auto;
   }
   .offer-card {
-    max-width: 240px;
+    max-width: 230px;
     min-height: 280px;
   }
   .offer-icon {
