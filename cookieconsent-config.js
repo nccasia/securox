@@ -48,14 +48,13 @@ CookieConsent.run({
       translations: {
          en: {
             consentModal: {
-               title: "Hello traveller, it's cookie time!",
+               title: "Cookie",
                description:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+                  "We use cookies to provide a better experience. Click Accept all to agree to the storing of all cookies, or to manage your preferences. If you choose Reject all, we will only use necessary cookies. To learn more, please read our Cookie Policy.",
                acceptAllBtn: "Accept all",
                acceptNecessaryBtn: "Reject all",
                showPreferencesBtn: "Manage preferences",
-               footer:
-                  '<a href="#link">Privacy Policy</a>\n<a href="#link">Terms and conditions</a>',
+               //  footer: '<a href="#">Privacy Policy</a>\n<a href="#">Terms and conditions</a>',
             },
             preferencesModal: {
                title: "Consent Preferences Center",
@@ -68,30 +67,27 @@ CookieConsent.run({
                   {
                      title: "Cookie Usage",
                      description:
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                        "Please choose your settings for this site below. You can allow or deny non essential cookies.",
                   },
                   {
                      title: 'Strictly Necessary Cookies <span class="pm__badge">Always Enabled</span>',
-                     description:
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                     description: "Please see the list of essential cookies in our Cookie Policy",
                      linkedCategory: "necessary",
                   },
                   {
                      title: "Analytics Cookies",
-                     description:
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                     description: "Please see the list of analytics cookies in our Cookie Policy",
                      linkedCategory: "analytics",
                   },
                   {
-                     title: "Advertisement Cookies",
-                     description:
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                     title: "Marketing Cookies",
+                     description: "Please see the list of marketing cookies in our Cookie Policy",
                      linkedCategory: "marketing",
                   },
                   {
                      title: "More information",
                      description:
-                        'For any query in relation to my policy on cookies and your choices, please <a class="cc__link" href="#yourdomain.com">contact me</a>.',
+                        'For any query in relation to my policy on cookies and your choices, please <a class="cc__link" href="mailto:hello@securox.io">contact me</a>.',
                   },
                ],
             },
