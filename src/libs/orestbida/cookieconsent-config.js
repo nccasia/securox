@@ -1,5 +1,3 @@
-import "https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.umd.js";
-
 document.documentElement.classList.add("cc--darkmode");
 CookieConsent.run({
    guiOptions: {
@@ -40,6 +38,7 @@ CookieConsent.run({
          consentState.ad_user_data = "granted";
          consentState.ad_personalization = "granted";
       }
+      console.log("consentState", consentState);
       gtag("consent", "update", consentState);
    },
    language: {
