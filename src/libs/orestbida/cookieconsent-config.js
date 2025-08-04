@@ -1,3 +1,4 @@
+if(typeof CookieConsent!=='undefined'){
 document.documentElement.classList.add("cc--darkmode");
 CookieConsent.run({
    guiOptions: {
@@ -93,3 +94,4 @@ CookieConsent.run({
       },
    },
 });
+}
