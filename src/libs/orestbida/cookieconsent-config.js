@@ -38,7 +38,6 @@ CookieConsent.run({
          consentState.ad_user_data = "granted";
          consentState.ad_personalization = "granted";
       }
-      console.log("consentState", consentState);
       gtag("consent", "update", consentState);
    },
    language: {
