@@ -161,28 +161,67 @@ function showToast(message, isError = false) {
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
-
+function printMess(o, l) {
+  document.getElementById(o).innerHTML = l;
+}
 document.addEventListener("DOMContentLoaded", function () {
-  const newsletterForm = document.querySelector(".footer-newsletter");
-  if (newsletterForm) {
-    newsletterForm.addEventListener("submit", async function (e) {
-      e.preventDefault();
-      const emailInput = newsletterForm.querySelector('input[type="email"]');
-      const email = emailInput ? emailInput.value.trim() : "";
-      if (!email) {
-        return;
-      }
-      if (!isValidEmail(email)) {
-        showToast("Please enter a valid email address.", true);
-        return;
-      }
-      const result = await sendEmail(email);
-      if (result) {
-        newsletterForm.reset();
-        showToast("Thank you for signing up!");
-      } else {
-        showToast("Failed to send. Please try again later.", true);
-      }
-    });
-  }
+  const formEl = document.querySelector(".form");
+
+  formEl.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const fullName = document.getElementById("fullName").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const content = document.getElementById("content").value;
+
+    if (!fullName || !email || !phone || !content) {
+      document.getElementById("nameMiss").innerHTML =
+        "Please fill out all required fields.";
+      return; 
+    }
+
+    Array.from(formEl.elements).forEach((el) => (el.disabled = true));
+
+    const payload = {
+      email: email,
+      content: `Name: ${fullName}\n Phone: ${phone}\n Content: ${content}`,
+    };
+    console.log("Payload to be sent:", payload);
+    const submitButton = formEl.querySelector('button[type="submit"]');
+    const loadingButton = formEl.querySelector('button[type="button"]');
+
+    submitButton.classList.add("d-none");
+    loadingButton.classList.remove("d-none");
+
+    fetch("https://email.ncc.asia/ncc-site-api-sendmail", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          printMess(
+            "nameSuccess",
+            "Thank you, your submission has been received."
+          );
+          formEl.reset();
+        } else {
+          printMess("nameError", `${data.message}`);
+        }
+      })
+      .catch((error) => {
+        printMess(
+          "nameError",
+          "Oops, something went wrong. Please try again later."
+        );
+      })
+      .finally(() => {
+        formEl.reset();
+        Array.from(formEl.elements).forEach((el) => (el.disabled = false));
+        submitButton.classList.remove("d-none");
+        loadingButton.classList.add("d-none");
+      });
+  });
 });
