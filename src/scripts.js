@@ -187,7 +187,6 @@ document.addEventListener("DOMContentLoaded", function () {
       email: email,
       content: `Name: ${fullName}\n Phone: ${phone}\n Content: ${content}`,
     };
-    console.log("Payload to be sent:", payload);
     const submitButton = formEl.querySelector('button[type="submit"]');
     const loadingButton = formEl.querySelector('button[type="button"]');
 
