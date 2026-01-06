@@ -1,0 +1,38 @@
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: 1000;
+    background: #1de782;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.skip-link:focus {
+    left: 10px;
+    top: 10px;
+    width: auto;
+    height: auto;
+    font-size: 1rem;
+    outline: 2px solid #1de782;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* From contact-us-section.css */
+.d-none {
+    display: none !important;
+}

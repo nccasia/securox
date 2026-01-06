@@ -1,0 +1,31 @@
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+@media (max-width: 1200px) {
+    .container-xl {
+        margin: 0 auto;
+        max-width: 950px;
+        /*1100px*/
+    }
+}
+
+@media (max-width: 992px) {
+    .container-lg {
+        margin: 0 auto;
+        max-width: 880px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-md {
+        margin: 0 auto;
+        max-width: 685px;
+    }
+}
+
+.main-container {
+    width: auto;
+    box-sizing: border-box;
+}

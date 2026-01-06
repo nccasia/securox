@@ -1,0 +1,84 @@
+/* Offer Cards Section Layout */
+.merged-cards-section {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -14%;
+    margin-bottom: 50px;
+}
+
+.merged-cards-section .map-under-cards {
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+    opacity: 0.3;
+    position: absolute;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.offer-cards-wrapper {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    justify-items: center;
+    align-items: stretch;
+}
+
+.offer-cards-wrapper .offer-card.extra {
+    justify-self: center;
+    grid-column: 2;
+}
+
+@media (max-width: 1200px) {
+    .offer-cards-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .offer-cards-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 650px;
+        gap: 32px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .offer-cards-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 550px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .merged-cards-section {
+        margin: 8px 0 16px 0;
+        max-width: 100vw;
+    }
+
+    .merged-cards-section .map-under-cards {
+        display: none;
+    }
+
+    .offer-cards-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        align-items: stretch;
+        justify-content: center;
+        margin-top: 0;
+        padding-left: 12px;
+        padding-right: 12px;
+        width: auto;
+    }
+}
