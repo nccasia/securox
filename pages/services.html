@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Get Started | Securox IO</title>
+    <title>Services | Securox IO</title>
     <meta name="description"
-        content="Get started with Securox IO - Begin your journey to comprehensive security with our professional penetration testing and security assessment services." />
-    <meta property="og:title" content="Get Started | Securox IO" />
+        content="Our comprehensive security services - SAST, DAST, MAST, Cloud Security, Penetration Testing, and more." />
+    <meta property="og:title" content="Services | Securox IO" />
     <meta property="og:description"
-        content="Begin your journey to comprehensive security with Securox IO's professional penetration testing services." />
+        content="Explore our wide range of professional cybersecurity services tailored to your business needs." />
     <meta property="og:image" content="../public/logoIO.png" />
     <meta property="og:type" content="website" />
     <link rel="shortcut icon" type="image/png" href="../public/logoIO.png" />
@@ -23,13 +23,9 @@
     <link rel="stylesheet" href="../src/styles/components/footer.css" />
     <link rel="stylesheet" href="../src/styles/components/social.css" />
     <link rel="stylesheet" href="../src/styles/components/cards.css" />
-    <link rel="stylesheet" href="../src/styles/components/forms.css" />
     <!-- Section Styles -->
-    <link rel="stylesheet" href="../src/styles/sections/hero.css" />
-    <link rel="stylesheet" href="../src/styles/sections/about.css" />
     <link rel="stylesheet" href="../src/styles/sections/services.css" />
     <link rel="stylesheet" href="../src/styles/sections/offers.css" />
-    <link rel="stylesheet" href="../src/styles/sections/contact.css" />
     <link rel="stylesheet" href="../src/styles/pages/detail.css" />
 </head>
 
@@ -57,10 +53,10 @@
                 <nav class="nav-menu" role="navigation" aria-label="Main navigation">
                     <a href="../index.html" tabindex="0">Home</a>
                     <a href="about.html" tabindex="0">About Us</a>
-                    <a href="services.html" tabindex="0">Services</a>
+                    <a href="services.html" class="active" tabindex="0">Services</a>
                     <a href="contact.html" tabindex="0">Contact Us</a>
                 </nav>
-                <a href="#" class="get-started" aria-label="Get Started">Get Started</a>
+                <a href="get-started.html" class="get-started" aria-label="Get Started">Get Started</a>
             </div>
         </header>
         <!-- ================= END HEADER SECTION ================= -->
@@ -68,79 +64,76 @@
         <!-- ================= PAGE HERO SECTION ================= -->
         <section class="page-hero">
             <div class="container container-xl">
-                <h1>Get Started with Securox IO</h1>
-                <p class="hero-subtitle">Your journey to comprehensive security begins here.</p>
+                <h1>Our Security Services</h1>
+                <p class="hero-subtitle">Comprehensive cybersecurity solutions tailored to protect your business.</p>
             </div>
         </section>
         <!-- ================= END PAGE HERO SECTION ================= -->
 
         <!-- ================= CONTENT SECTIONS ================= -->
-        <section class="narrative-split">
-            <div class="narrative-text fade-in-left">
-                <h2>Why Choose Securox</h2>
-                <p>Securox IO is a trusted cybersecurity partner with over 10 years of experience in penetration testing
-                    and security assessments. Our certified professionals use proven methodologies to identify
-                    vulnerabilities and protect your business from evolving cyber threats.</p>
-                <ul class="benefit-list" style="margin-top: 20px;">
-                    <li><span class="check"></span> Certified security professionals (OSCP, CEH, CISSP)</li>
-                    <li><span class="check"></span> Comprehensive testing methodologies</li>
-                    <li><span class="check"></span> Detailed, actionable reports</li>
-                    <li><span class="check"></span> Ongoing support and remediation guidance</li>
-                </ul>
-            </div>
-            <div class="narrative-image fade-in-right"></div>
-        </section>
-
-        <section class="glass-overlay-section">
-            <div class="container container-xl">
-                <div class="glass-card fade-in-left">
-                    <h2>How We Work</h2>
-                    <div class="process-steps" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-                        <div class="step"
-                            style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); color: white;">
-                            <div class="step-number" style="background: white; border-color: #1de782;">1</div>
-                            <h3 style="color: white;">Discovery</h3>
-                            <p style="color: rgba(255,255,255,0.8);">We start by understanding your business and
-                                security concerns.</p>
-                        </div>
-                        <div class="step"
-                            style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); color: white;">
-                            <div class="step-number" style="background: white; border-color: #1de782;">2</div>
-                            <h3 style="color: white;">Scoping</h3>
-                            <p style="color: rgba(255,255,255,0.8);">We define the systems and applications to be
-                                tested.</p>
-                        </div>
-                        <div class="step"
-                            style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); color: white;">
-                            <div class="step-number" style="background: white; border-color: #1de782;">3</div>
-                            <h3 style="color: white;">Testing</h3>
-                            <p style="color: rgba(255,255,255,0.8);">Our experts conduct thorough testing using manual
-                                techniques.</p>
-                        </div>
-                        <div class="step"
-                            style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); color: white;">
-                            <div class="step-number" style="background: white; border-color: #1de782;">4</div>
-                            <h3 style="color: white;">Reporting</h3>
-                            <p style="color: rgba(255,255,255,0.8);">We deliver a comprehensive report with findings and
-                                recommendations.</p>
-                        </div>
-                    </div>
+        <section class="merged-cards-section" style="margin-top: 50px;">
+            <img src="../public/map.png" alt="Map" class="map-under-cards" />
+            <div class="offer-cards-wrapper container container-xl container-lg container-md">
+                <div class="offer-card">
+                    <div class="offer-icon icon1"></div>
+                    <h3>Static Application Security testing - SAST</h3>
+                    <p>Source code analysis to detect security vulnerabilities</p>
+                    <a href="services/sast.html" class="offer-btn">Learn more</a>
                 </div>
-            </div>
-        </section>
-
-        <section class="content-section">
-            <div class="container container-xl">
-                <h2 class="fade-in-left">Security Assessment Process</h2>
-                <p class="fade-in-left">Our security assessment process is designed to provide maximum value while
-                    minimizing disruption to
-                    your operations:</p>
-                <ul class="benefit-list technical fade-in-right">
-                    <li><span class="check"></span> Pre-engagement planning and communication</li>
-                    <li><span class="check"></span> Non-disruptive testing during agreed windows</li>
-                    <li><span class="check"></span> Real-time communication for critical findings</li>
-                    <li><span class="check"></span> Post-assessment debrief and support</li>
-                </ul>
+                <div class="offer-card">
+                    <div class="offer-icon icon2"></div>
+                    <h3>Dynamic Application Security Testing - DAST</h3>
+                    <p>Analyzing the software during runtime to identify security vulnerabilities.</p>
+                    <a href="services/dast.html" class="offer-btn">Learn more</a>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon icon3"></div>
+                    <h3>Mobile Application Security testing - MAST</h3>
+                    <p>Analyzing mobile applications to identify security vulnerabilities.</p>
+                    <a href="services/mast.html" class="offer-btn">Learn more</a>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon icon4"></div>
+                    <h3>Cloud Security Assessment</h3>
+                    <p>Evaluate cloud infrastructure for potential security risks.</p>
+                    <a href="services/cloud-security.html" class="offer-btn">Learn more</a>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon icon5"></div>
+                    <h3>Penetration Testing</h3>
+                    <p>Simulate attacks to identify and fix vulnerabilities.</p>
+                    <a href="services/penetration-testing.html" class="offer-btn">Learn more</a>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon icon6"></div>
+                    <h3>Security Awareness Training</h3>
+                    <p>Educate your team to recognize and avoid security threats.</p>
+                    <a href="services/awareness-training.html" class="offer-btn">Learn more</a>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon icon7"></div>
+                    <h3>Network Security Review</h3>
+                    <p>Assess your network for vulnerabilities and risks.</p>
+                    <a href="services/network-security.html" class="offer-btn">Learn more</a>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon icon8"></div>
+                    <h3>Compliance Consulting</h3>
+                    <p>Guidance to meet industry security standards and regulations.</p>
+                    <a href="services/compliance.html" class="offer-btn">Learn more</a>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon icon9"></div>
+                    <h3>Incident Response Planning</h3>
+                    <p>Prepare your team to respond effectively to security incidents.</p>
+                    <a href="services/incident-response.html" class="offer-btn">Learn more</a>
+                </div>
+                <div class="offer-card extra">
+                    <div class="offer-icon icon10"></div>
+                    <h3>Custom Security Solution</h3>
+                    <p>Tailored security services to fit your unique business needs.</p>
+                    <a href="services/custom-solution.html" class="offer-btn">Learn more</a>
+                </div>
             </div>
         </section>
         <!-- ================= END CONTENT SECTIONS ================= -->
@@ -148,10 +141,9 @@
         <!-- ================= CTA SECTION ================= -->
         <section class="cta-section">
             <div class="container container-xl">
-                <h2 class="fade-in-left">Ready to secure your business?</h2>
-                <p class="fade-in-left">Contact our team today to discuss your security needs and get a customized
-                    assessment plan.</p>
-                <a href="contact.html" class="cta-button fade-in-right">Contact Us</a>
+                <h2>Need a custom security assessment?</h2>
+                <p>Contact our experts to discuss a tailored solution for your organization.</p>
+                <a href="contact.html" class="cta-button">Get in Touch</a>
             </div>
         </section>
         <!-- ================= END CTA SECTION ================= -->
@@ -221,7 +213,6 @@
             </div>
         </footer>
         <!-- ================= END FOOTER SECTION ================= -->
-        <!-- ================= SOCIAL MEDIA SECTION ================= -->
         <section class="social-section">
             <div class="social-container container container-xl container-lg container-md">
                 <a class="social-icon" href="https://x.com/securox_io" target="_blank" rel="noopener noreferrer">
@@ -237,7 +228,6 @@
                 </a>
             </div>
         </section>
-        <!-- ================= END SOCIAL MEDIA SECTION ================= -->
     </div>
     <script src="../src/scripts.js"></script>
 </body>

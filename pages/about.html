@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Get Started | Securox IO</title>
+    <title>About Us | Securox IO</title>
     <meta name="description"
-        content="Get started with Securox IO - Begin your journey to comprehensive security with our professional penetration testing and security assessment services." />
-    <meta property="og:title" content="Get Started | Securox IO" />
+        content="Learn about Securox IO - Our mission, values, and why we are a trusted cybersecurity partner." />
+    <meta property="og:title" content="About Us | Securox IO" />
     <meta property="og:description"
-        content="Begin your journey to comprehensive security with Securox IO's professional penetration testing services." />
+        content="Learn about our mission, values, and what makes us a trusted cybersecurity partner." />
     <meta property="og:image" content="../public/logoIO.png" />
     <meta property="og:type" content="website" />
     <link rel="shortcut icon" type="image/png" href="../public/logoIO.png" />
@@ -22,14 +22,7 @@
     <link rel="stylesheet" href="../src/styles/components/header.css" />
     <link rel="stylesheet" href="../src/styles/components/footer.css" />
     <link rel="stylesheet" href="../src/styles/components/social.css" />
-    <link rel="stylesheet" href="../src/styles/components/cards.css" />
-    <link rel="stylesheet" href="../src/styles/components/forms.css" />
     <!-- Section Styles -->
-    <link rel="stylesheet" href="../src/styles/sections/hero.css" />
-    <link rel="stylesheet" href="../src/styles/sections/about.css" />
-    <link rel="stylesheet" href="../src/styles/sections/services.css" />
-    <link rel="stylesheet" href="../src/styles/sections/offers.css" />
-    <link rel="stylesheet" href="../src/styles/sections/contact.css" />
     <link rel="stylesheet" href="../src/styles/pages/detail.css" />
 </head>
 
@@ -56,11 +49,11 @@
                 </button>
                 <nav class="nav-menu" role="navigation" aria-label="Main navigation">
                     <a href="../index.html" tabindex="0">Home</a>
-                    <a href="about.html" tabindex="0">About Us</a>
+                    <a href="about.html" class="active" tabindex="0">About Us</a>
                     <a href="services.html" tabindex="0">Services</a>
                     <a href="contact.html" tabindex="0">Contact Us</a>
                 </nav>
-                <a href="#" class="get-started" aria-label="Get Started">Get Started</a>
+                <a href="get-started.html" class="get-started" aria-label="Get Started">Get Started</a>
             </div>
         </header>
         <!-- ================= END HEADER SECTION ================= -->
@@ -68,8 +61,8 @@
         <!-- ================= PAGE HERO SECTION ================= -->
         <section class="page-hero">
             <div class="container container-xl">
-                <h1>Get Started with Securox IO</h1>
-                <p class="hero-subtitle">Your journey to comprehensive security begins here.</p>
+                <h1>About Securox IO</h1>
+                <p class="hero-subtitle">Your trusted partner in comprehensive cybersecurity solutions.</p>
             </div>
         </section>
         <!-- ================= END PAGE HERO SECTION ================= -->
@@ -77,16 +70,13 @@
         <!-- ================= CONTENT SECTIONS ================= -->
         <section class="narrative-split">
             <div class="narrative-text fade-in-left">
-                <h2>Why Choose Securox</h2>
-                <p>Securox IO is a trusted cybersecurity partner with over 10 years of experience in penetration testing
-                    and security assessments. Our certified professionals use proven methodologies to identify
-                    vulnerabilities and protect your business from evolving cyber threats.</p>
-                <ul class="benefit-list" style="margin-top: 20px;">
-                    <li><span class="check"></span> Certified security professionals (OSCP, CEH, CISSP)</li>
-                    <li><span class="check"></span> Comprehensive testing methodologies</li>
-                    <li><span class="check"></span> Detailed, actionable reports</li>
-                    <li><span class="check"></span> Ongoing support and remediation guidance</li>
-                </ul>
+                <h2>Who We Are</h2>
+                <p>Securox IO is a specialized cybersecurity firm focused on penetration testing and security
+                    assessments. Founded by industry veterans with decades of combined experience, we have grown into a
+                    trusted partner for businesses seeking to protect their digital assets.</p>
+                <p>Our team consists of certified security professionals who are passionate about identifying
+                    vulnerabilities before malicious actors can exploit them. We combine cutting-edge tools with deep
+                    expertise to deliver comprehensive security solutions.</p>
             </div>
             <div class="narrative-image fade-in-right"></div>
         </section>
@@ -94,36 +84,70 @@
         <section class="glass-overlay-section">
             <div class="container container-xl">
                 <div class="glass-card fade-in-left">
-                    <h2>How We Work</h2>
-                    <div class="process-steps" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-                        <div class="step"
-                            style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); color: white;">
-                            <div class="step-number" style="background: white; border-color: #1de782;">1</div>
-                            <h3 style="color: white;">Discovery</h3>
-                            <p style="color: rgba(255,255,255,0.8);">We start by understanding your business and
-                                security concerns.</p>
-                        </div>
-                        <div class="step"
-                            style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); color: white;">
-                            <div class="step-number" style="background: white; border-color: #1de782;">2</div>
-                            <h3 style="color: white;">Scoping</h3>
-                            <p style="color: rgba(255,255,255,0.8);">We define the systems and applications to be
-                                tested.</p>
-                        </div>
-                        <div class="step"
-                            style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); color: white;">
-                            <div class="step-number" style="background: white; border-color: #1de782;">3</div>
-                            <h3 style="color: white;">Testing</h3>
-                            <p style="color: rgba(255,255,255,0.8);">Our experts conduct thorough testing using manual
-                                techniques.</p>
-                        </div>
-                        <div class="step"
-                            style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); color: white;">
-                            <div class="step-number" style="background: white; border-color: #1de782;">4</div>
-                            <h3 style="color: white;">Reporting</h3>
-                            <p style="color: rgba(255,255,255,0.8);">We deliver a comprehensive report with findings and
-                                recommendations.</p>
-                        </div>
+                    <h2>Our Mission</h2>
+                    <p>Our mission is to make world-class cybersecurity accessible to businesses of all sizes. We
+                        believe
+                        that every organization deserves protection from cyber threats, and we work tirelessly to
+                        deliver
+                        reliable, professional security services.</p>
+                    <ul class="benefit-list" style="margin-top: 30px; text-align: left;">
+                        <li
+                            style="background: rgba(255,255,255,0.05); color: white; border-color: rgba(255,255,255,0.1);">
+                            <span class="check"></span> Protect businesses from evolving cyber threats
+                        </li>
+                        <li
+                            style="background: rgba(255,255,255,0.05); color: white; border-color: rgba(255,255,255,0.1);">
+                            <span class="check"></span> Provide actionable insights for security improvement
+                        </li>
+                        <li
+                            style="background: rgba(255,255,255,0.05); color: white; border-color: rgba(255,255,255,0.1);">
+                            <span class="check"></span> Build long-term partnerships with our clients
+                        </li>
+                        <li
+                            style="background: rgba(255,255,255,0.05); color: white; border-color: rgba(255,255,255,0.1);">
+                            <span class="check"></span> Continuously adapt to the changing threat landscape
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section alt-bg">
+            <div class="container container-xl">
+                <h2 class="fade-in-left">Why Choose Securox IO</h2>
+                <div class="modern-grid">
+                    <!-- Column 1 & 2 -->
+                    <div class="modern-card fade-in-left">
+                        <h3>Professional</h3>
+                        <p>High Standards & Technical Excellence</p>
+                    </div>
+                    <div class="modern-card fade-in-left">
+                        <h3>Certified</h3>
+                        <p>Experts holding OSCP, CISSP & CEH</p>
+                    </div>
+                    
+                    <!-- Column 3 (Spans 3 rows) -->
+                    <div class="modern-card highlight large fade-in-right">
+                        <h3>10+ Years Experience</h3>
+                        <p>A decade of excellence in identifying and remediating complex security vulnerabilities across diverse industries worldwide.</p>
+                    </div>
+
+                    <!-- Column 1 & 2 again -->
+                    <div class="modern-card fade-in-left">
+                        <h3>Commitments</h3>
+                        <p>Dedicated Long-term Success Partners</p>
+                    </div>
+                    <div class="modern-card fade-in-left">
+                        <h3>Top Quality</h3>
+                        <p>Deep analysis and clear remediation</p>
+                    </div>
+                    <div class="modern-card fade-in-left">
+                        <h3>Expertise</h3>
+                        <p>Pentest, Cloud & Compliance Experts</p>
+                    </div>
+                    <div class="modern-card fade-in-left">
+                        <h3>Support</h3>
+                        <p>24/7 technical and remediation help</p>
                     </div>
                 </div>
             </div>
@@ -131,16 +155,30 @@
 
         <section class="content-section">
             <div class="container container-xl">
-                <h2 class="fade-in-left">Security Assessment Process</h2>
-                <p class="fade-in-left">Our security assessment process is designed to provide maximum value while
-                    minimizing disruption to
-                    your operations:</p>
-                <ul class="benefit-list technical fade-in-right">
-                    <li><span class="check"></span> Pre-engagement planning and communication</li>
-                    <li><span class="check"></span> Non-disruptive testing during agreed windows</li>
-                    <li><span class="check"></span> Real-time communication for critical findings</li>
-                    <li><span class="check"></span> Post-assessment debrief and support</li>
-                </ul>
+                <h2 class="fade-in-left">Our Values</h2>
+                <div class="feature-grid">
+                    <a href="values/reliable-testing.html" class="feature-card fade-in-left"
+                        style="text-decoration: none;">
+                        <h3>Reliable Testing</h3>
+                        <p>Proven methodologies deliver consistent, trustworthy security assessments.</p>
+                        <span style="color: #17c1bc; font-weight: 600; margin-top: auto; padding-top: 15px;">Learn more
+                            &rarr;</span>
+                    </a>
+                    <a href="values/professional-expertise.html" class="feature-card fade-in-left"
+                        style="text-decoration: none;">
+                        <h3>Professional Expertise</h3>
+                        <p>Certified specialists provide comprehensive penetration testing services.</p>
+                        <span style="color: #17c1bc; font-weight: 600; margin-top: auto; padding-top: 15px;">Learn more
+                            &rarr;</span>
+                    </a>
+                    <a href="values/top-quality-results.html" class="feature-card fade-in-right"
+                        style="text-decoration: none;">
+                        <h3>Top Quality Results</h3>
+                        <p>Advanced tools and secure processes identify critical vulnerabilities.</p>
+                        <span style="color: #17c1bc; font-weight: 600; margin-top: auto; padding-top: 15px;">Learn more
+                            &rarr;</span>
+                    </a>
+                </div>
             </div>
         </section>
         <!-- ================= END CONTENT SECTIONS ================= -->
@@ -148,10 +186,9 @@
         <!-- ================= CTA SECTION ================= -->
         <section class="cta-section">
             <div class="container container-xl">
-                <h2 class="fade-in-left">Ready to secure your business?</h2>
-                <p class="fade-in-left">Contact our team today to discuss your security needs and get a customized
-                    assessment plan.</p>
-                <a href="contact.html" class="cta-button fade-in-right">Contact Us</a>
+                <h2>Ready to secure your business?</h2>
+                <p>Contact our team today to discuss your security needs.</p>
+                <a href="contact.html" class="cta-button">Contact Us</a>
             </div>
         </section>
         <!-- ================= END CTA SECTION ================= -->
@@ -221,7 +258,6 @@
             </div>
         </footer>
         <!-- ================= END FOOTER SECTION ================= -->
-        <!-- ================= SOCIAL MEDIA SECTION ================= -->
         <section class="social-section">
             <div class="social-container container container-xl container-lg container-md">
                 <a class="social-icon" href="https://x.com/securox_io" target="_blank" rel="noopener noreferrer">
@@ -237,7 +273,6 @@
                 </a>
             </div>
         </section>
-        <!-- ================= END SOCIAL MEDIA SECTION ================= -->
     </div>
     <script src="../src/scripts.js"></script>
 </body>

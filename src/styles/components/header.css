@@ -60,6 +60,11 @@
     color: #2ee59d;
 }
 
+.nav-menu a.active {
+    border-bottom: 2px solid #2ee59d;
+    padding-bottom: 4px;
+}
+
 .dropdown {
     position: relative;
 }
@@ -149,7 +154,7 @@
     }
 
     body {
-        padding-top: 70px;
+        padding-top: 65px;
         margin: 0;
     }
 
@@ -229,6 +234,11 @@
     cursor: pointer;
     text-decoration: none;
     transition: color 0.3s, background 0.3s;
+}
+
+.mobile-menu-nav a.active {
+    color: #2ee59d;
+    background: rgba(46, 229, 157, 0.1);
 }
 
 .mobile-menu-nav a:active,
