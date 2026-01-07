@@ -1,0 +1,481 @@
+.hero-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-container {
+    align-items: center;
+}
+
+.hero-image {
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.image-frame {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    max-height: 900px;
+    min-height: 220px;
+    margin-top: 32px;
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.group-img,
+.two-people-img {
+    width: auto;
+    height: auto;
+    max-width: unset;
+    object-fit: unset;
+}
+
+.hero-content {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    z-index: 2;
+    text-align: left;
+    max-width: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+}
+
+.discover-btn {
+    background: linear-gradient(90deg, #1de782 0%, #13a8f5 100%);
+    color: #fff;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 0 4px 16px rgba(30, 167, 245, 0.15);
+}
+
+.discover-btn:hover {
+    background: linear-gradient(90deg, #13a8f5 0%, #1de782 100%);
+}
+
+/* Services Section moved from here? No, hero-section.css in the list.
+   But hero-section.css has .services-section.
+   Wait, is services-section separate?
+   The prompt says "services-offer-section.css" -> "sections/services.css".
+   But hero-section.css contains .services-section which is the 3 top cards (Reliable Testing etc).
+   I should keep these in hero.css or move to separate services file?
+   Prompt says "services-offer-section.css" -> "sections/services.css".
+   The 3 top cards are visually part of hero overlap. I will keep them in hero.css.
+*/
+.services-section {
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -150px;
+    margin-bottom: 5%;
+}
+
+.services-container {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(30, 167, 245, 0.16), 0 1.5px 8px rgba(40, 60, 76, 0.10);
+    padding: 32px 28px 24px 28px;
+    min-width: 260px;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+}
+
+.service-card:hover {
+    background: linear-gradient(90deg, #13a8f5 0%, #1de782 100%);
+    color: #fff;
+    box-shadow: 0 12px 48px rgba(30, 167, 245, 0.22), 0 3px 16px rgba(40, 60, 76, 0.13);
+    transform: translateY(-4px) scale(1.03);
+}
+
+.service-card:hover h3,
+.service-card:hover p {
+    color: #fff;
+}
+
+.service-card:hover .service-arrow svg {
+    stroke: #fff;
+}
+
+.service-card .service-arrow svg g {
+    stroke: #1DE782;
+}
+
+.service-card:hover .service-arrow svg g {
+    stroke: #fff;
+}
+
+.service-card h3 {
+    font-size: 1.18rem;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    color: #222;
+    text-align: center;
+    width: 100%;
+}
+
+.service-card p {
+    font-size: 0.98rem;
+    color: #888;
+    text-align: center;
+}
+
+.service-arrow {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.service-card svg {
+    width: 60px;
+    height: 60px;
+}
+
+@media (max-width: 1200px) {
+    .hero-section {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-container {
+        justify-self: center;
+        align-items: center;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .image-frame {
+        height: 60vh;
+        max-height: 600px;
+        min-height: 180px;
+        margin-top: 24px;
+    }
+
+    .hero-content {
+        max-width: 80%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .discover-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        border-radius: 999px;
+        font-size: 1.3rem;
+        padding: 14px 16px;
+        white-space: nowrap;
+        max-width: none;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .services-section {
+        margin-top: -80px;
+    }
+
+    .services-container {
+        gap: 14px;
+        max-width: 90vw;
+        width: 100%;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .service-card {
+        min-width: 200px;
+        padding: 24px 16px 18px 16px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service-card svg {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-container {
+        width: 100%;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .image-frame {
+        height: 45vh;
+        max-height: 400px;
+        min-height: 120px;
+        margin-top: 16px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.7rem;
+    }
+
+    .discover-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        border-radius: 999px;
+        font-size: 1rem;
+        padding: 12px 12px;
+        white-space: nowrap;
+        max-width: none;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .services-section {
+        width: 100%;
+        max-width: 99vw;
+        margin-top: -48px;
+    }
+
+    .services-container {
+        gap: 16px;
+        max-width: 90vw;
+        width: 100%;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .service-card {
+        min-width: 90px;
+        font-size: 0.85rem;
+        padding: 24px 8px 16px 8px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service-card h3 {
+        font-size: 1rem;
+    }
+
+    .service-card p {
+        font-size: 0.8rem;
+    }
+
+    .service-card svg {
+        width: 48px !important;
+        height: 48px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-container {
+        width: 100%;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .image-frame {
+        height: 45vh;
+        max-height: 100vw;
+        min-height: 90px;
+        width: 100%;
+        max-width: 100vw;
+        justify-content: center;
+        align-items: center;
+        margin-top: 12px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .discover-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        border-radius: 999px;
+        font-size: 1rem;
+        padding: 10px 16px;
+        white-space: nowrap;
+        max-width: none;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .services-section {
+        margin-top: -48px;
+    }
+
+    .services-container {
+        width: 90%;
+        justify-content: center;
+    }
+
+    .service-card {
+        min-width: 80px !important;
+        padding: 10px 8px 8px 8px !important;
+        font-size: 0.75rem;
+    }
+
+    .service-card h3 {
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+    }
+
+    .service-card p {
+        font-size: 0.7rem;
+        color: #888;
+        margin-bottom: 5px;
+    }
+
+    .service-card svg {
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-container {
+        display: none;
+    }
+
+    .hero-section {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-container {
+        width: 100%;
+    }
+
+    .hero-image {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 90%;
+        flex: unset;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .image-frame {
+        width: 100%;
+        max-width: 98vw;
+        height: 210px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 8px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .discover-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        border-radius: 999px;
+        font-size: 1rem;
+        padding: 10px 16px;
+        white-space: nowrap;
+        max-width: none;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .about-protection-section {
+        margin-top: 0;
+    }
+
+    .services-section {
+        margin-top: -20px;
+        margin-bottom: 0;
+    }
+}

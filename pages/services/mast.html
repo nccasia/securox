@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAST - Mobile Application Security Testing | Securox IO</title>
+    <meta name="description"
+        content="Mobile Application Security Testing (MAST) - Comprehensive security analysis for iOS and Android applications." />
+    <link rel="shortcut icon" type="image/png" href="../../public/logoIO.png" />
+    <link rel="stylesheet" href="../../src/styles/base/reset.css" />
+    <link rel="stylesheet" href="../../src/styles/base/typography.css" />
+    <link rel="stylesheet" href="../../src/styles/base/layout.css" />
+    <link rel="stylesheet" href="../../src/styles/base/utilities.css" />
+    <link rel="stylesheet" href="../../src/styles/components/header.css" />
+    <link rel="stylesheet" href="../../src/styles/components/footer.css" />
+    <link rel="stylesheet" href="../../src/styles/components/social.css" />
+    <link rel="stylesheet" href="../../src/styles/pages/detail.css" />
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="mobile-menu-overlay" id="mobileMenu">
+            <nav class="mobile-menu-nav"><a href="../../index.html">Home</a><a href="../about.html">About
+                    Us</a><a href="../services.html" class="active">Services</a><a href="../contact.html">Contact
+                    Us</a></nav>
+        </div>
+        <header class="main-header">
+            <div class="header-container container container-xl" id="headerContainer">
+                <div class="logo"><a href="../../index.html"><img src="../../public/logoIO.png"
+                            alt="Securox IO Logo" /></a></div><button class="menu-icon" aria-label="Open menu"
+                    id="menuIcon"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+                <nav class="nav-menu"><a href="../../index.html">Home</a><a href="../about.html">About Us</a><a
+                        href="../services.html" class="active">Services</a><a href="../contact.html">Contact Us</a>
+                </nav><a href="../get-started.html" class="get-started">Get Started</a>
+            </div>
+        </header>
+
+        <section class="page-hero">
+            <div class="container container-xl">
+                <h1>Mobile Application Security Testing (MAST)</h1>
+                <p class="hero-subtitle">Comprehensive security analysis for iOS and Android applications.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container container-xl">
+                <a href="../services.html" class="back-nav">&larr; All Services</a>
+                <h2>Service Overview</h2>
+                <div class="service-overview">
+                    <div class="service-text fade-in-left">
+                        <p>Mobile Application Security Testing (MAST) is crucial because mobile apps operate in a
+                            hostile
+                            environment—the user's device. Unlike web apps where the code stays on your server, mobile
+                            app
+                            binaries are downloaded, allowing attackers to decompile, reverse engineer, and tamper with
+                            your
+                            code.</p>
+                        <p>Securox IO checks your iOS and Android apps for vulnerabilities in the code (static
+                            analysis),
+                            runtime behavior (dynamic analysis), and network communication. We follow the OWASP Mobile
+                            Application Security Verification Standard (MASVS) to ensure deep coverage.</p>
+                    </div>
+                    <div class="service-image fade-in-right">
+                        <img src="../../public/mast_icon.png" alt="Mobile Security Icon - Secure Smartphone" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section alt-bg">
+            <div class="container container-xl">
+                <h2>Why It Matters</h2>
+                <p class="fade-in-left">Mobile apps face unique threats that web scanners miss. MAST ensures:</p>
+                <ul class="benefit-list">
+                    <li><span class="check"></span> <strong>Binary Protection:</strong> Preventing attackers from
+                        decompiling your app to steal IP or keys.</li>
+                    <li><span class="check"></span> <strong>Data Storage:</strong> Ensuring sensitive PII/tokens are
+                        encrypted in Keychain/Keystore.</li>
+                    <li><span class="check"></span> <strong>Network Security:</strong> Verifying SSL Pinning
+                        implementation to stop Man-in-the-Middle attacks.</li>
+                    <li><span class="check"></span> <strong>API Integrity:</strong> Ensuring the app backend rejects
+                        tampered requests from modified apps.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container container-xl">
+                <h2>Methodology</h2>
+                <div class="process-steps">
+                    <div class="step fade-in-left">
+                        <div class="step-number">01</div>
+                        <h3>Deep-Dive</h3>
+                        <p>We install your app on rooted/jailbroken devices to bypass standard OS restrictions.</p>
+                    </div>
+                    <div class="step fade-in-left">
+                        <div class="step-number">02</div>
+                        <h3>Interception</h3>
+                        <p>We proxy traffic to analyze API calls for broken auth and data leakage.</p>
+                    </div>
+                    <div class="step fade-in-left">
+                        <div class="step-number">03</div>
+                        <h3>Hooking</h3>
+                        <p>We use tools like Frida to manipulate app logic at runtime (e.g., bypass login).</p>
+                    </div>
+                    <div class="step fade-in-left">
+                        <div class="step-number">04</div>
+                        <h3>Reporting</h3>
+                        <p>We deliver a detailed report with reproduction steps (video/script) and fix code.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section alt-bg">
+            <div class="container container-xl">
+                <h2>Common Questions</h2>
+                <div class="feature-grid">
+                    <div class="feature-card fade-in-right">
+                        <h3>Do you test on real devices?</h3>
+                        <p>Yes. We use physical iOS and Android devices, not just emulators, to ensure realistic testing
+                            conditions.</p>
+                    </div>
+                    <div class="feature-card fade-in-right">
+                        <h3>What do you need to start?</h3>
+                        <p>We need the IPA (iOS) and APK (Android) files. For best results, a "debug" build without
+                            obfuscation is helpful for finding logic bugs.</p>
+                    </div>
+                    <div class="feature-card fade-in-right">
+                        <h3>Will Apple/Google reject the app?</h3>
+                        <p>Our testing helps you PASS store reviews. We check for common security issues that trigger
+                            App Store rejections.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container container-xl">
+                <h2>Secure your mobile app</h2>
+                <p>Protect your users and your reputation.</p>
+                <a href="../contact.html" class="cta-button">Test Mobile App</a>
+            </div>
+        </section>
+
+        <footer class="footer-section">
+            <div class="footer-container container container-xl container-lg container-md">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <img src="../../public/logotext.png" alt="securox io" class="footer-logo-img" />
+                    </div>
+                    <ul class="footer-contact">
+                        <li>
+                            <img src="../../public/phone.png" alt="Phone" class="footer-icon" />
+                            (+84) 2466874606
+                        </li>
+                        <li>
+                            <img src="../../public/mail.png" alt="Mail" class="footer-icon" />
+                            hello@securox.io
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-locations">
+                    <h3>Our Locations</h3>
+                    <div class="footer-location-columns">
+                        <ul class="footer-location-list left">
+                            <li>
+                                <img src="../../public/location.png" alt="Location" class="footer-icon" />
+                                <span><strong> HANOI 1:</strong> 2nd Floor, CT3 The Pride, To Huu Street, Ha Dong, Ha
+                                    Noi.</span>
+                            </li>
+                            <li>
+                                <img src="../../public/location.png" alt="Location" class="footer-icon" />
+                                <span><strong> HANOI 2:</strong> 7th Floor, VinFast My Dinh Building, 8 Pham Hung
+                                    Street, Tu Liem, Ha Noi.</span>
+                            </li>
+                            <li>
+                                <img src="../../public/location.png" alt="Location" class="footer-icon" />
+                                <span><strong> HANOI 3:</strong> 8th Floor, Vinaconex Diamond Tower, 459C Bach Mai
+                                    street, Bach Mai, Ha Noi.</span>
+                            </li>
+                            <li>
+                                <img src="../../public/location.png" alt="Location" class="footer-icon" />
+                                <span><strong>SAI GON:</strong> 8th Floor, ST. MORITZ Tower, 1014 Pham Van Dong Street,
+                                    Hiep Binh, Ho Chi Minh</span>
+                            </li>
+                        </ul>
+                        <ul class="footer-location-list right">
+                            <li>
+                                <img src="../../public/location.png" alt="Location" class="footer-icon" />
+                                <span><strong>VINH:</strong> 4th Floor, HD Building, Vinh - Cua Lo Boulevard, Block 17,
+                                    Vinh Phu Ward, Nghe An.</span>
+                            </li>
+                            <li>
+                                <img src="../../public/location.png" alt="Location" class="footer-icon" />
+                                <span><strong>DA NANG:</strong> NCC Building, 498 - 500 Nguyen Huu Tho Street, Cam Le,
+                                    Da Nang.</span>
+                            </li>
+                            <li>
+                                <img src="../../public/location.png" alt="Location" class="footer-icon" />
+                                <span><strong>QUY NHON:</strong> 3rd Floor, Hibecco Building, 307 Nguyen Thi Minh Khai
+                                    Street, Quy Nhon Nam, Gia Lai</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <section class="social-section">
+            <div class="social-container container container-xl"><a class="social-icon" href="https://x.com/securox_io"
+                    target="_blank" rel="noopener noreferrer"><img src="../../public/iconX.png" alt="Twitter" /></a><a class="social-icon"
+                    href="https://www.facebook.com/securoxio" target="_blank" rel="noopener noreferrer"><img src="../../public/iconfacebook.png"
+                        alt="Facebook" /></a><a class="social-icon" href="https://www.linkedin.com/company/securox-io"
+                    target="_blank" rel="noopener noreferrer"><img src="../../public/iconlinkedin.png" alt="Linkedin" /></a></div>
+        </section>
+    </div>
+    <script src="../../src/scripts.js"></script>
+</body>
+
+</html>

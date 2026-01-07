@@ -162,24 +162,35 @@ function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 function printMess(o, l) {
-  document.getElementById(o).innerHTML = l;
+  const el = document.getElementById(o);
+  if (el) el.textContent = l;
 }
+
 document.addEventListener("DOMContentLoaded", function () {
   const formEl = document.querySelector(".form");
+  if (!formEl) return;
 
   formEl.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const fullName = document.getElementById("fullName").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
-    const content = document.getElementById("content").value;
+    const sanitizeSingleLine = (str) =>
+      (str || "").replace(/[\r\n]/g, "").trim().slice(0, 100);
+    const sanitizeMultiLine = (str) => (str || "").trim().slice(0, 1000);
+
+    const fullName = sanitizeSingleLine(document.getElementById("fullName").value);
+    const email = sanitizeSingleLine(document.getElementById("email").value);
+    const phone = sanitizeSingleLine(document.getElementById("phone").value);
+    const content = sanitizeMultiLine(document.getElementById("content").value);
 
     if (!fullName || !email || !phone || !content) {
-      document.getElementById("nameMiss").innerHTML =
-        "Please fill out all required fields.";
-      return; 
+      printMess("nameMiss", "Please fill out all required fields.");
+      return;
     }
+
+    // Clear previous error messages
+    printMess("nameMiss", "");
+    printMess("nameError", "");
+    printMess("nameSuccess", "");
 
     Array.from(formEl.elements).forEach((el) => (el.disabled = true));
 
@@ -190,8 +201,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const submitButton = formEl.querySelector('button[type="submit"]');
     const loadingButton = formEl.querySelector('button[type="button"]');
 
-    submitButton.classList.add("d-none");
-    loadingButton.classList.remove("d-none");
+    if (submitButton) submitButton.classList.add("d-none");
+    if (loadingButton) loadingButton.classList.remove("d-none");
 
     fetch("https://email.ncc.asia/ncc-site-api-sendmail", {
       method: "POST",
@@ -219,8 +230,32 @@ document.addEventListener("DOMContentLoaded", function () {
       .finally(() => {
         formEl.reset();
         Array.from(formEl.elements).forEach((el) => (el.disabled = false));
-        submitButton.classList.remove("d-none");
-        loadingButton.classList.add("d-none");
+        if (submitButton) submitButton.classList.remove("d-none");
+        if (loadingButton) loadingButton.classList.add("d-none");
       });
+  })
+});
+// ================= SCROLL TRIGGER ANIMATION SCRIPT =================
+document.addEventListener("DOMContentLoaded", function () {
+  const animatedElements = document.querySelectorAll(
+    ".fade-in-left, .fade-in-right"
+  );
+  if (animatedElements.length === 0) return;
+
+  const observerOptions = {
+    threshold: 0.2, // Trigger when 20% of the element is visible
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target); // Only animate once
+      }
+    });
+  }, observerOptions);
+
+  animatedElements.forEach((el) => {
+    observer.observe(el);
   });
 });

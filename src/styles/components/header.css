@@ -1,0 +1,257 @@
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    ;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s, background 0.3s;
+    background: #283c4c;
+    padding: 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    height: 56px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    background: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-left: auto;
+    justify-content: center;
+}
+
+.nav-menu a {
+    color: #b2e9d6;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0 4px;
+    transition: color 0.3s, background 0.3s;
+}
+
+.nav-menu a.active,
+.nav-menu a:hover {
+    color: #2ee59d;
+}
+
+.nav-menu a.active {
+    border-bottom: 2px solid #2ee59d;
+    padding-bottom: 4px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.arrow {
+    font-size: 0.8em;
+    margin-left: 2px;
+    color: #2ee59d;
+}
+
+/* Moved .get-started to buttons.css or keep here if specific to header? 
+   Plan said buttons.css for common. .get-started is quite specific. 
+   I will adapt later. For now, exact copy to header.css as it is header specific element. */
+.get-started {
+    background: linear-gradient(90deg, #3ec6e0 0%, #2ee59d 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-left: 24px;
+    transition: opacity 0.2s;
+}
+
+.get-started:hover {
+    opacity: 0.9;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    z-index: 10001;
+    position: relative;
+}
+
+.menu-icon .bar {
+    width: 28px;
+    height: 4px;
+    background: #2ee59d;
+    margin: 3px 0;
+    border-radius: 2px;
+    display: block;
+    transition: 0.3s cubic-bezier(.4, 2, .6, 1);
+    position: relative;
+}
+
+.menu-icon.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-icon.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active .bar:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+@media (max-width: 1200px) {
+    .header-container {
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .main-header {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    body {
+        padding-top: 65px;
+        margin: 0;
+    }
+
+    .header-container {
+        flex-direction: row;
+        align-items: center;
+        padding: 0px 14px;
+        margin: 6px 0;
+        width: 100%;
+    }
+
+    .logo {
+        width: 48px;
+        height: 48px;
+        margin-right: 0;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .menu-icon {
+        display: flex;
+        align-items: end;
+    }
+
+    .get-started {
+        display: none;
+    }
+}
+
+/* Mobile Menu Overlay Styles */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #283c4c;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    transition: opacity 0.3s, background 0.3s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-menu-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+    gap: 18px;
+}
+
+.mobile-menu-nav a,
+.mobile-menu-nav button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 14px 0;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s, background 0.3s;
+}
+
+.mobile-menu-nav a.active {
+    color: #2ee59d;
+    background: rgba(46, 229, 157, 0.1);
+}
+
+.mobile-menu-nav a:active,
+.mobile-menu-nav a:focus,
+.mobile-menu-nav button:active,
+.mobile-menu-nav button:focus {
+    border: 1.5px solid #fff;
+    border-radius: 8px;
+    outline: none;
+    background: none;
+}
+
+body.mobile-menu-open {
+    position: fixed;
+    touch-action: none;
+}
