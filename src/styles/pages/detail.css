@@ -271,7 +271,7 @@
     border-radius: 12px;
     padding: 28px;
     text-align: left;
-    border: 1px solid rgba(0,0,0,0.06);
+    border: 1px solid rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -290,7 +290,7 @@
 
 .modern-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 
 .modern-card:hover::after {
@@ -322,13 +322,13 @@
 }
 
 .modern-card.highlight p {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .modern-card.highlight::after {
     background: #1de782;
-    width: 100%;
-    /* Always visible line */
+    width: 0%;
+    /* Disable hover effect */
 }
 
 .modern-card.large {
@@ -443,7 +443,7 @@
     .circle-grid {
         gap: 20px;
     }
-    
+
     .circle-item {
         width: 150px;
         height: 150px;
