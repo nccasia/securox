@@ -170,6 +170,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const formEl = document.querySelector(".form");
   if (!formEl) return;
 
+  const phoneEl = document.getElementById('phone');
+  if (phoneEl) phoneEl.addEventListener('input', function () {
+    this.value = this.value.replace(/[^\d\s+()]/g, '');
+  });
+
   formEl.addEventListener("submit", (event) => {
     event.preventDefault();
 
